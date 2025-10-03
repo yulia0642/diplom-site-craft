@@ -8,9 +8,12 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary">日本ガイド</h3>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-3xl">🍁</span>
+              <h3 className="text-2xl font-bold text-primary">Момидзи</h3>
+            </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Ваш персональный гид по Японии. Персонализированные маршруты и культурные гиды.
+              Медийная платформа и гид по Японии. Персональные маршруты, культурные истории и аутентичный контент.
             </p>
           </div>
 
@@ -54,7 +57,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© {currentYear} Путеводитель по Японии. Все права защищены.</p>
+          <p>© {currentYear} Момидзи — медийная платформа о Японии. Все права защищены.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary transition-colors">Политика конфиденциальности</a>
             <a href="#" className="hover:text-primary transition-colors">Условия использования</a>

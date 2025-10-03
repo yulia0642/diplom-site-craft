@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-japan.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -18,15 +18,16 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-20 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-4">
-            <MapPin className="w-4 h-4" />
-            <span className="text-sm font-medium">Ваш персональный гид по Японии</span>
+          <div className="inline-flex items-center gap-3 mb-6">
+            <span className="text-6xl">🍁</span>
+            <h1 className="text-6xl md:text-8xl font-bold text-primary">
+              Момидзи
+            </h1>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            Откройте для себя
-            <span className="block text-primary mt-2">Японию</span>
-          </h1>
+          <p className="text-2xl md:text-3xl font-light text-foreground mb-6">
+            Медийная платформа о Японии
+          </p>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Персонализированные маршруты, культурные гиды и образовательный контент для незабываемого путешествия в Страну восходящего солнца
