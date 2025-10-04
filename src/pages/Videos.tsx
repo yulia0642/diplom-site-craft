@@ -2,17 +2,20 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Play, Clock, Calendar } from "lucide-react";
-import vlogImg from "@/assets/vlog-filming.jpg";
-import kyotoImg from "@/assets/kyoto-street.jpg";
-import cultureImg from "@/assets/culture-torii.jpg";
-import zenImg from "@/assets/zen-garden.jpg";
+import tokyoVlogImg from "@/assets/vlog-tokyo-24h.jpg";
+import kyotoSecretImg from "@/assets/vlog-kyoto-secret.jpg";
+import shrineEtiquetteImg from "@/assets/vlog-shrine-etiquette.jpg";
+import zenMeditationImg from "@/assets/vlog-zen-meditation.jpg";
+import streetFoodImg from "@/assets/vlog-street-food.jpg";
+import ruralLifeImg from "@/assets/vlog-rural-life.jpg";
+import japan30daysImg from "@/assets/vlog-japan-30days.jpg";
 
 const videos = [
   {
     id: 1,
     title: "24 часа в Токио: от рассвета до заката",
     creator: "Александр Токио",
-    thumbnail: vlogImg,
+    thumbnail: tokyoVlogImg,
     duration: "18:45",
     views: "125K",
     date: "2 дня назад",
@@ -22,7 +25,7 @@ const videos = [
     id: 2,
     title: "Секретные улочки Киото: что не покажут в туристических гидах",
     creator: "Анна в Японии",
-    thumbnail: kyotoImg,
+    thumbnail: kyotoSecretImg,
     duration: "15:30",
     views: "89K",
     date: "5 дней назад",
@@ -32,7 +35,7 @@ const videos = [
     id: 3,
     title: "Как правильно посещать японские храмы и святыни",
     creator: "Дмитрий Сакура",
-    thumbnail: cultureImg,
+    thumbnail: shrineEtiquetteImg,
     duration: "12:20",
     views: "156K",
     date: "1 неделю назад",
@@ -42,7 +45,7 @@ const videos = [
     id: 4,
     title: "Медитация в дзен-саду: практика осознанности",
     creator: "Елена Путь Дзен",
-    thumbnail: zenImg,
+    thumbnail: zenMeditationImg,
     duration: "25:10",
     views: "203K",
     date: "2 недели назад",
@@ -52,7 +55,7 @@ const videos = [
     id: 5,
     title: "Японская уличная еда: от такояки до рамена",
     creator: "Foodie в Осаке",
-    thumbnail: vlogImg,
+    thumbnail: streetFoodImg,
     duration: "20:15",
     views: "312K",
     date: "3 недели назад",
@@ -62,7 +65,7 @@ const videos = [
     id: 6,
     title: "Моя жизнь в японской деревне",
     creator: "Мария Инака",
-    thumbnail: zenImg,
+    thumbnail: ruralLifeImg,
     duration: "16:40",
     views: "178K",
     date: "1 месяц назад",
@@ -82,8 +85,8 @@ const Videos = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Видеоблоги о Японии
             </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-              Смотрите авторские видеоблоги от русскоязычных путешественников и экспатов, 
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+              Смотрите авторские видеоблоги от русскоязычных путешественников и экспатов,<br className="hidden md:block" />
               живущих в Японии. Реальные истории, практические советы и уникальные ракурсы.
             </p>
             <div className="flex justify-center gap-4 text-sm text-muted-foreground">
@@ -101,9 +104,9 @@ const Videos = () => {
 
           {/* Featured Video */}
           <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
-            <div className="relative group cursor-pointer overflow-hidden rounded-lg">
+            <div className="relative group cursor-pointer overflow-hidden rounded-lg hover-lift">
               <img
-                src={vlogImg}
+                src={japan30daysImg}
                 alt="Рекомендуемое видео"
                 className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105"
               />
@@ -120,7 +123,7 @@ const Videos = () => {
                   Япония за 30 дней: полное путешествие
                 </h3>
                 <p className="text-sm mt-2 opacity-90">
-                  Эпический видеогид по всем регионам Японии от Хоккайдо до Окинавы
+                  Эпический видеогид по всем регионам Японии от Хоккайдо до Окинавы.
                 </p>
               </div>
             </div>
@@ -170,8 +173,8 @@ const Videos = () => {
           <div className="mt-16 max-w-3xl mx-auto text-center animate-fade-in">
             <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
               <h2 className="text-2xl font-bold mb-4">Станьте частью сообщества</h2>
-              <p className="text-muted-foreground mb-6">
-                Подписывайтесь на канал Момидзи, чтобы не пропустить новые видео, 
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Подписывайтесь на канал Момидзи, чтобы не пропустить новые видео,<br className="hidden md:block" />
                 эксклюзивный контент и прямые трансляции из Японии.
               </p>
               <Button size="lg" className="gap-2">
