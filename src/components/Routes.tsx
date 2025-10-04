@@ -2,15 +2,18 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, MapPin, Coins, Users, Leaf, Camera, Heart, Mountain } from "lucide-react";
-import toriiImage from "@/assets/culture-torii.jpg";
-import kyotoImage from "@/assets/kyoto-street.jpg";
-import zenImage from "@/assets/zen-garden.jpg";
+import spiritualImage from "@/assets/spiritual-temple.jpg";
+import tokyoImage from "@/assets/tokyo-cityscape.jpg";
+import zenNatureImage from "@/assets/zen-nature.jpg";
+import budgetImage from "@/assets/budget-travel.jpg";
+import familyImage from "@/assets/family-japan.jpg";
+import photoImage from "@/assets/photo-momiji.jpg";
 
 const routes = [
   {
-    image: toriiImage,
+    image: spiritualImage,
     title: "Духовная Япония",
-    description: "Храмы, святыни и священные места от Киото до Нары с посещением утренних медитаций",
+    description: "Храмы, святыни и священные места от Киото до Нары с посещением утренних медитаций.",
     duration: "7 дней",
     difficulty: "Средний",
     budget: "150-250 тыс. ₽",
@@ -20,9 +23,9 @@ const routes = [
     included: ["Проживание в традиционных рёканах", "Завтраки", "Входные билеты в храмы", "Гид-переводчик"]
   },
   {
-    image: kyotoImage,
+    image: tokyoImage,
     title: "Классический маршрут",
-    description: "Токио, Киото, Осака, Хиросима — главные города Японии за две недели с гастротуром",
+    description: "Токио, Киото, Осака, Хиросима — главные города Японии за две недели с гастротуром.",
     duration: "14 дней",
     difficulty: "Легкий",
     budget: "200-350 тыс. ₽",
@@ -32,21 +35,21 @@ const routes = [
     included: ["Отели 4*", "JR Pass", "Гастрономические туры", "Экскурсии с гидом"]
   },
   {
-    image: zenImage,
+    image: zenNatureImage,
     title: "Дзен и природа",
-    description: "Уединенные онсены, сады дзен и природные парки вдали от туристических троп",
+    description: "Уединенные онсены, сады дзен и природные парки вдали от туристических троп.",
     duration: "10 дней",
     difficulty: "Сложный",
     budget: "180-300 тыс. ₽",
     tags: ["Природа", "Релакс", "Аутентичность"],
     preferences: ["Природа", "Релакс", "Уединение"],
     groupSize: "Индивидуальный / Пары",
-    included: ["Премиум рёканы с частными онсенами", "Все питание", "Трансферы", "Чайные церемонии"]
+    included: ["Премиум рёканы с частными онсенами", "Всё питание", "Трансферы", "Чайные церемонии"]
   },
   {
-    image: kyotoImage,
+    image: budgetImage,
     title: "Бюджетное приключение",
-    description: "Экономный маршрут для самостоятельных путешественников с хостелами и уличной едой",
+    description: "Экономный маршрут для самостоятельных путешественников с хостелами и уличной едой.",
     duration: "10 дней",
     difficulty: "Легкий",
     budget: "80-120 тыс. ₽",
@@ -56,9 +59,9 @@ const routes = [
     included: ["Хостелы", "JR Pass", "Список недорогих ресторанов", "Карты и гиды"]
   },
   {
-    image: toriiImage,
+    image: familyImage,
     title: "Семейный отдых",
-    description: "Маршрут для семей с детьми: парки развлечений, музеи, удобный график без спешки",
+    description: "Маршрут для семей с детьми: парки развлечений, музеи, удобный график без спешки.",
     duration: "12 дней",
     difficulty: "Легкий",
     budget: "250-400 тыс. ₽",
@@ -68,9 +71,9 @@ const routes = [
     included: ["Семейные отели", "Входные билеты в парки", "Детское меню", "Няня по запросу"]
   },
   {
-    image: zenImage,
+    image: photoImage,
     title: "Фотосафари",
-    description: "Маршрут для фотографов: лучшие локации, рассветы и закаты, сезон момидзи",
+    description: "Маршрут для фотографов: лучшие локации, рассветы и закаты, сезон момидзи.",
     duration: "9 дней",
     difficulty: "Средний",
     budget: "200-320 тыс. ₽",
@@ -98,11 +101,12 @@ const Routes = () => {
     <section className="py-24 bg-gradient-to-b from-background to-secondary/10">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             Маршруты на любой вкус и бюджет
           </h2>
-          <p className="text-xl text-muted-foreground mb-8">
-            Выберите готовый маршрут или создайте уникальный с учётом ваших предпочтений, бюджета и стиля путешествия
+          <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            Выберите готовый маршрут или создайте уникальный<br className="hidden md:block" />
+            с учётом ваших предпочтений, бюджета и стиля путешествия.
           </p>
           
           <div className="flex flex-wrap gap-3 justify-center">
@@ -191,9 +195,9 @@ const Routes = () => {
           <Card className="max-w-4xl mx-auto border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
             <CardContent className="py-8">
               <h3 className="text-2xl font-semibold mb-4">Не нашли подходящий маршрут?</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Используйте наш конструктор маршрутов: укажите предпочтения, бюджет, даты и получите 
-                персональный план путешествия с учётом всех ваших пожеланий
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">
+                Используйте наш конструктор маршрутов: укажите предпочтения, бюджет, даты<br className="hidden md:block" />
+                и получите персональный план путешествия с учётом всех ваших пожеланий.
               </p>
               <Button size="lg" className="px-8">
                 Создать персональный маршрут

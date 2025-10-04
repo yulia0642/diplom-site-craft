@@ -13,7 +13,8 @@ const Footer = () => {
               <h3 className="text-2xl font-bold text-primary">Момидзи</h3>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Медийная платформа и гид по Японии. Персональные маршруты, культурные истории и аутентичный контент.
+              Медийная платформа и гид по Японии.<br />
+              Персональные маршруты, культурные истории и аутентичный контент.
             </p>
           </div>
 

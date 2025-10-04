@@ -30,7 +30,9 @@ const Hero = () => {
           </p>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Персонализированные маршруты, культурные гиды и образовательный контент для незабываемого путешествия в Страну восходящего солнца
+            Персонализированные маршруты, культурные гиды<br className="hidden md:block" />
+            и образовательный контент для незабываемого путешествия<br className="hidden md:block" />
+            в Страну восходящего солнца.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">

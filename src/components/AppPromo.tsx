@@ -12,11 +12,12 @@ const AppPromo = () => {
               <Bell className="w-4 h-4" />
               <span className="text-sm font-medium">Скоро запуск</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
               Мобильное приложение Момидзи
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Всё содержимое платформы всегда под рукой, плюс эксклюзивные функции для путешественников
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Всё содержимое платформы всегда под рукой,<br className="hidden md:block" />
+              плюс эксклюзивные функции для путешественников.
             </p>
           </div>
 
@@ -28,7 +29,7 @@ const AppPromo = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Подкасты</h3>
                 <p className="text-muted-foreground">
-                  Слушайте истории о Японии, языковые уроки и интервью с путешественниками в любое время
+                  Слушайте истории о Японии, языковые уроки и интервью с путешественниками в любое время.
                 </p>
               </CardContent>
             </Card>
@@ -40,7 +41,7 @@ const AppPromo = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Карты метро</h3>
                 <p className="text-muted-foreground">
-                  Интерактивные карты метро всех крупных городов Японии с офлайн-доступом и маршрутизацией
+                  Интерактивные карты метро всех крупных городов Японии с офлайн-доступом и маршрутизацией.
                 </p>
               </CardContent>
             </Card>
@@ -52,7 +53,7 @@ const AppPromo = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Офлайн-режим</h3>
                 <p className="text-muted-foreground">
-                  Сохраняйте маршруты, статьи и гиды для доступа без интернета прямо в поездке
+                  Сохраняйте маршруты, статьи и гиды для доступа без интернета прямо в поездке.
                 </p>
               </CardContent>
             </Card>

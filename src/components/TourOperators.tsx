@@ -10,8 +10,9 @@ const TourOperators = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Планируйте поездку вашим способом
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Выберите удобный вариант: готовый тур от партнёров или полностью самостоятельное путешествие
+          <p className="text-xl text-muted-foreground leading-relaxed">
+            Выберите удобный вариант: готовый тур от партнёров<br className="hidden md:block" />
+            или полностью самостоятельное путешествие.
           </p>
         </div>
 
@@ -25,7 +26,7 @@ const TourOperators = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Сотрудничаем с проверенными туроператорами, специализирующимися на путешествиях в Японию
+                Сотрудничаем с проверенными туроператорами, специализирующимися на путешествиях в Японию.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -60,7 +61,7 @@ const TourOperators = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Создайте уникальное путешествие с помощью наших инструментов и гидов
+                Создайте уникальное путешествие с помощью наших инструментов и гидов.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -92,9 +93,11 @@ const TourOperators = () => {
             <CardContent className="py-8">
               <Users className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-2xl font-semibold mb-3">Наши партнёры</h3>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
-                Мы сотрудничаем только с проверенными туроператорами, которые обеспечивают высокое качество 
-                сервиса и глубокое понимание японской культуры. Каждый партнёр проходит тщательный отбор.
+              <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                Мы сотрудничаем только с проверенными туроператорами,<br className="hidden md:block" />
+                которые обеспечивают высокое качество сервиса<br className="hidden md:block" />
+                и глубокое понимание японской культуры.<br />
+                Каждый партнёр проходит тщательный отбор.
               </p>
             </CardContent>
           </Card>

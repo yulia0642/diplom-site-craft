@@ -17,8 +17,9 @@ const CTA = () => {
             Готовы отправиться в путешествие?
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Получите персонализированный маршрут и эксклюзивные советы для вашей поездки в Японию
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Получите персонализированный маршрут и эксклюзивные советы<br className="hidden md:block" />
+            для вашей поездки в Японию.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 max-w-xl mx-auto">
@@ -34,7 +35,8 @@ const CTA = () => {
           </div>
 
           <p className="text-sm text-muted-foreground">
-            Присоединяйтесь к 10,000+ путешественникам, которые уже открыли для себя Японию с нами
+            Присоединяйтесь к 10,000+ путешественникам,<br className="hidden sm:block" />
+            которые уже открыли для себя Японию с нами.
           </p>
         </div>
       </div>
