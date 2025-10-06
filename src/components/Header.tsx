@@ -1,18 +1,25 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { language, setLanguage, t } = useLanguage();
 
   const navItems = [
-    { name: "Главная", path: "/" },
-    { name: "Статьи", path: "/articles" },
-    { name: "Книги", path: "/books" },
-    { name: "Видеоблоги", path: "/videos" },
-    { name: "О платформе", path: "/about" },
+    { name: t('nav.home'), path: "/" },
+    { name: t('nav.articles'), path: "/articles" },
+    { name: t('nav.books'), path: "/books" },
+    { name: t('nav.videos'), path: "/videos" },
+    { name: t('nav.about'), path: "/about" },
   ];
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'ru' ? 'en' : 'ru');
+  };
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -26,7 +33,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -40,6 +47,16 @@ const Header = () => {
               {item.name}
             </Link>
           ))}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={toggleLanguage}
+            className="gap-2"
+            aria-label="Toggle language"
+          >
+            <Globe size={18} />
+            <span className="font-medium">{language === 'ru' ? 'EN' : 'RU'}</span>
+          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -68,6 +85,16 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={toggleLanguage}
+              className="gap-2 justify-start"
+              aria-label="Toggle language"
+            >
+              <Globe size={18} />
+              <span className="font-medium">{language === 'ru' ? 'English' : 'Русский'}</span>
+            </Button>
           </div>
         </div>
       )}
