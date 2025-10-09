@@ -66,10 +66,10 @@ const Books = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 pt-24 pb-16">
+      <main className="flex-1 pt-24 pb-16 wave-pattern">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16 animate-fade-in">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16 animate-fade-in japanese-border">
             <div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
                 Книги о Японии
@@ -98,7 +98,7 @@ const Books = () => {
             {books.map((book, index) => (
               <div
                 key={book.id}
-                className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 hover:shadow-lg animate-fade-in"
+                className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 hover:shadow-lg animate-fade-in japanese-border"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="p-6 space-y-4">

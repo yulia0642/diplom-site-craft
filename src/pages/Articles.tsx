@@ -46,10 +46,10 @@ const Articles = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 pt-24 pb-16">
+      <main className="flex-1 pt-24 pb-16 wave-pattern">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-16 animate-fade-in japanese-border">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Статьи о Японии
             </h1>
@@ -67,7 +67,7 @@ const Articles = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <Link to={`/articles/${article.id}`} className="block">
-                  <div className="overflow-hidden rounded-lg mb-4">
+                  <div className="overflow-hidden rounded-lg mb-4 japanese-border">
                     <img
                       src={article.image}
                       alt={article.title}

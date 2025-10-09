@@ -78,10 +78,10 @@ const Videos = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 pt-24 pb-16">
+      <main className="flex-1 pt-24 pb-16 wave-pattern">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-16 animate-fade-in japanese-border">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Видеоблоги о Японии
             </h1>
@@ -104,7 +104,7 @@ const Videos = () => {
 
           {/* Featured Video */}
           <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
-            <div className="relative group cursor-pointer overflow-hidden rounded-lg hover-lift">
+            <div className="relative group cursor-pointer overflow-hidden rounded-lg hover-lift japanese-border">
               <img
                 src={japan30daysImg}
                 alt="Рекомендуемое видео"

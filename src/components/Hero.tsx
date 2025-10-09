@@ -22,7 +22,7 @@ const Hero = () => {
             Момидзи
           </h1>
           
-          <p className="text-xl md:text-2xl font-light text-muted-foreground mb-8">
+          <p className="text-xl md:text-2xl font-light text-primary mb-8">
             Медийная платформа о Японии
           </p>
           

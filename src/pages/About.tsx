@@ -8,10 +8,10 @@ const About = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 pt-24 pb-16">
+      <main className="flex-1 pt-24 pb-16 wave-pattern">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
-          <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in">
+          <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in japanese-border">
             <div className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden">
               <img
                 src={momidjiImg}
@@ -108,7 +108,7 @@ const About = () => {
               ].map((value, index) => (
                 <div
                   key={value.title}
-                  className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-colors"
+                  className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-colors japanese-border"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <h3 className="font-bold text-lg mb-3">{value.title}</h3>

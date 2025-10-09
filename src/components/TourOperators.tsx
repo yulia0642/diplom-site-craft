@@ -4,7 +4,7 @@ import { Building2, Map, CheckCircle2, Users } from "lucide-react";
 
 const TourOperators = () => {
   return (
-    <section className="py-24 bg-secondary/20">
+    <section className="py-24 bg-secondary/20 wave-pattern">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -17,7 +17,7 @@ const TourOperators = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <Card className="border-2 border-primary/20 hover-lift">
+          <Card className="border-2 border-primary/20 hover-lift japanese-border">
             <CardHeader>
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                 <Building2 className="w-6 h-6 text-primary" />
@@ -52,7 +52,7 @@ const TourOperators = () => {
             </CardContent>
           </Card>
 
-          <Card className="border-2 border-accent/20 hover-lift">
+          <Card className="border-2 border-accent/20 hover-lift japanese-border">
             <CardHeader>
               <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-4">
                 <Map className="w-6 h-6 text-accent" />

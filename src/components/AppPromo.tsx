@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AppPromo = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-accent/5 to-transparent">
+    <section className="py-24 bg-gradient-to-b from-accent/5 to-transparent wave-pattern">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 animate-fade-up">

@@ -187,7 +187,7 @@ const ArticleDetail = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <main className="flex-1 pt-24 pb-16">
+      <main className="flex-1 pt-24 pb-16 wave-pattern">
         <article className="container mx-auto px-4 max-w-4xl">
           {/* Back Button */}
           <Link
@@ -199,7 +199,7 @@ const ArticleDetail = () => {
           </Link>
 
           {/* Article Header */}
-          <div className="mb-8 animate-fade-in">
+          <div className="mb-8 animate-fade-in japanese-border">
             <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
               <span>{article.date}</span>
               <span>•</span>
@@ -211,7 +211,7 @@ const ArticleDetail = () => {
           </div>
 
           {/* Article Image */}
-          <div className="overflow-hidden rounded-lg mb-12 animate-fade-in">
+          <div className="overflow-hidden rounded-lg mb-12 animate-fade-in japanese-border">
             <img
               src={article.image}
               alt={article.title}

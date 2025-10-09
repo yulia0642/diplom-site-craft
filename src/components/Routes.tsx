@@ -98,7 +98,7 @@ const Routes = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-secondary/10">
+    <section className="py-24 bg-gradient-to-b from-background to-secondary/10 wave-pattern">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
@@ -123,7 +123,7 @@ const Routes = () => {
           {routes.map((route, index) => (
             <Card 
               key={index} 
-              className="overflow-hidden hover-lift border-border/50 group flex flex-col"
+              className="overflow-hidden hover-lift border-border/50 group flex flex-col japanese-border"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative h-56 overflow-hidden">
