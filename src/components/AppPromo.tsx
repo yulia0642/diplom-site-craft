@@ -22,7 +22,7 @@ const AppPromo = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <Card className="border-border/50 hover-lift">
+            <Card className="border-border/50 hover-lift japanese-border">
               <CardContent className="pt-6 text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Headphones className="w-8 h-8 text-primary" />
@@ -34,7 +34,7 @@ const AppPromo = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-border/50 hover-lift" style={{ animationDelay: '0.1s' }}>
+            <Card className="border-border/50 hover-lift japanese-border" style={{ animationDelay: '0.1s' }}>
               <CardContent className="pt-6 text-center">
                 <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Map className="w-8 h-8 text-accent" />
@@ -46,7 +46,7 @@ const AppPromo = () => {
               </CardContent>
             </Card>
 
-            <Card className="border-border/50 hover-lift" style={{ animationDelay: '0.2s' }}>
+            <Card className="border-border/50 hover-lift japanese-border" style={{ animationDelay: '0.2s' }}>
               <CardContent className="pt-6 text-center">
                 <div className="w-16 h-16 bg-secondary/30 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Smartphone className="w-8 h-8 text-foreground" />

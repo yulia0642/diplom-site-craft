@@ -10,7 +10,7 @@ All colors MUST be HSL.
   :root {
     /* Japanese minimalist color palette */
     --background: 0 0% 98%;
-    --foreground: 0 0% 15%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 15%;
@@ -203,5 +203,41 @@ All colors MUST be HSL.
   /* Decorative elements */
   .accent-border {
     border-image: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)), hsl(var(--primary))) 1;
+  }
+  
+  /* Japanese wave pattern */
+  .wave-pattern {
+    background-image: 
+      radial-gradient(circle at 100% 50%, transparent 20%, hsl(var(--primary) / 0.03) 21%, hsl(var(--primary) / 0.03) 34%, transparent 35%, transparent),
+      radial-gradient(circle at 0% 50%, transparent 20%, hsl(var(--primary) / 0.03) 21%, hsl(var(--primary) / 0.03) 34%, transparent 35%, transparent);
+    background-size: 80px 80px;
+    background-position: 0 0, 40px 40px;
+  }
+  
+  /* Subtle Japanese border accent */
+  .japanese-border {
+    position: relative;
+  }
+  
+  .japanese-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.3), transparent);
+  }
+  
+  /* Cherry blossom accent */
+  .sakura-accent {
+    position: relative;
+  }
+  
+  .sakura-accent::after {
+    content: '✿';
+    position: absolute;
+    color: hsl(var(--primary) / 0.15);
+    font-size: 1.5rem;
   }
 }

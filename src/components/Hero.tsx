@@ -17,22 +17,17 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-20 text-center">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-up">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <span className="text-6xl">🍁</span>
-            <h1 className="text-6xl md:text-8xl font-bold text-primary">
-              Момидзи
-            </h1>
-          </div>
+        <div className="max-w-4xl mx-auto space-y-6 animate-fade-up">
+          <h1 className="text-6xl md:text-8xl font-bold text-primary mb-2">
+            Момидзи
+          </h1>
           
-          <p className="text-2xl md:text-3xl font-light text-foreground mb-6">
+          <p className="text-xl md:text-2xl font-light text-muted-foreground mb-8">
             Медийная платформа о Японии
           </p>
           
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Персонализированные маршруты, культурные гиды<br className="hidden md:block" />
-            и образовательный контент для незабываемого путешествия<br className="hidden md:block" />
-            в Страну восходящего солнца.
+          <p className="text-xl md:text-2xl text-foreground max-w-2xl mx-auto leading-relaxed">
+            Персонализированные маршруты, культурные гиды и образовательный контент для незабываемого путешествия в Страну восходящего солнца
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">

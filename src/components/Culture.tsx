@@ -75,11 +75,11 @@ const Culture = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {cultureItems.map((item, index) => (
-              <Card 
-                key={index}
-                className="hover-lift border-border/50 bg-card/80 backdrop-blur-sm"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            <Card 
+              key={index}
+              className="hover-lift border-border/50 bg-card/80 backdrop-blur-sm japanese-border"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
                 <CardContent className="p-6 space-y-3">
                   <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center">
                     <item.icon className="w-6 h-6 text-accent" />
