@@ -14,8 +14,8 @@ import { useToast } from "@/hooks/use-toast";
 const CreateRoute = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
-  const [duration, setDuration] = useState([7]);
-  const [budget, setBudget] = useState([200]);
+  const [duration, setDuration] = useState(7);
+  const [budget, setBudget] = useState(200);
   const [travelers, setTravelers] = useState("1");
   
   const interests = [
@@ -88,12 +88,12 @@ const CreateRoute = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">{duration[0]} дней</span>
+                  <span className="text-2xl font-bold text-primary">{duration} дней</span>
                   <span className="text-sm text-muted-foreground">от 3 до 30 дней</span>
                 </div>
                 <Slider
-                  value={duration}
-                  onValueChange={setDuration}
+                  defaultValue={[duration]}
+                  onValueChange={(value) => setDuration(value[0])}
                   min={3}
                   max={30}
                   step={1}
@@ -113,12 +113,12 @@ const CreateRoute = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">{budget[0]} тыс. ₽</span>
+                  <span className="text-2xl font-bold text-primary">{budget} тыс. ₽</span>
                   <span className="text-sm text-muted-foreground">от 50 до 500 тыс. ₽</span>
                 </div>
                 <Slider
-                  value={budget}
-                  onValueChange={setBudget}
+                  defaultValue={[budget]}
+                  onValueChange={(value) => setBudget(value[0])}
                   min={50}
                   max={500}
                   step={10}
