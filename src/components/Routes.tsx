@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import { Clock, MapPin, Coins, Users, Leaf, Camera, Heart, Mountain } from "lucide-react";
 import spiritualImage from "@/assets/spiritual-temple.jpg";
 import tokyoImage from "@/assets/tokyo-cityscape.jpg";
@@ -199,9 +200,11 @@ const Routes = () => {
                 Используйте наш конструктор маршрутов: укажите предпочтения, бюджет, даты<br className="hidden md:block" />
                 и получите персональный план путешествия с учётом всех ваших пожеланий.
               </p>
-              <Button size="lg" className="px-8">
-                Создать персональный маршрут
-              </Button>
+              <Link to="/create-route">
+                <Button size="lg" className="px-8">
+                  Создать персональный маршрут
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>
