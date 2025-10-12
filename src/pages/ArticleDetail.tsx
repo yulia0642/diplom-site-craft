@@ -224,7 +224,7 @@ const ArticleDetail = () => {
             className="prose prose-lg max-w-none animate-fade-in
                        prose-headings:font-bold prose-headings:text-foreground
                        prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
-                       prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-16 prose-p:text-xl
+                       prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-8 prose-p:text-xl
                        prose-em:text-primary prose-em:not-italic prose-em:font-medium
                        prose-strong:text-foreground"
             dangerouslySetInnerHTML={{ __html: article.content }}
