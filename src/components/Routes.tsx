@@ -21,7 +21,8 @@ const routes = [
     tags: ["Культура", "Храмы", "Медитация"],
     preferences: ["Культура", "История", "Медитация"],
     groupSize: "Индивидуальный / Групповой",
-    included: ["Проживание в традиционных рёканах", "Завтраки и ужины кайсэки", "Входные билеты во все храмы", "Гид-переводчик", "Чайные церемонии", "Мастер-классы по каллиграфии"]
+    included: ["Проживание в традиционных рёканах", "Завтраки и ужины кайсэки", "Входные билеты во все храмы", "Гид-переводчик", "Чайные церемонии", "Мастер-классы по каллиграфии"],
+    category: "popular"
   },
   {
     image: tokyoImage,
@@ -33,7 +34,8 @@ const routes = [
     tags: ["Города", "Культура", "Гастрономия"],
     preferences: ["Города", "Еда", "Шопинг", "Культура"],
     groupSize: "Любой размер группы",
-    included: ["Отели 4* в центре городов", "JR Pass на 14 дней", "Гастрономические туры в каждом городе", "Экскурсии с русскоязычным гидом", "Завтраки", "Билеты на синкансэн"]
+    included: ["Отели 4* в центре городов", "JR Pass на 14 дней", "Гастрономические туры в каждом городе", "Экскурсии с русскоязычным гидом", "Завтраки", "Билеты на синкансэн"],
+    category: "popular"
   },
   {
     image: zenNatureImage,
@@ -45,7 +47,8 @@ const routes = [
     tags: ["Природа", "Релакс", "Аутентичность"],
     preferences: ["Природа", "Релакс", "Уединение"],
     groupSize: "Индивидуальный / Пары",
-    included: ["Премиум рёканы с частными онсенами", "Все приёмы пищи (кайсэки)", "Частные трансферы", "Чайные церемонии", "Сеансы медитации", "Spa-процедуры"]
+    included: ["Премиум рёканы с частными онсенами", "Все приёмы пищи (кайсэки)", "Частные трансферы", "Чайные церемонии", "Сеансы медитации", "Spa-процедуры"],
+    category: "new"
   },
   {
     image: budgetImage,
@@ -81,7 +84,8 @@ const routes = [
     tags: ["Фотография", "Природа", "Момидзи"],
     preferences: ["Фотография", "Природа", "Эстетика"],
     groupSize: "Малые группы до 8 человек",
-    included: ["Отели рядом с фотолокациями", "Ранние выезды на рассвет", "Разрешения на съёмку в храмах", "Консультации профессионального фотографа", "Карты лучших точек съёмки", "Гибкий график под погоду"]
+    included: ["Отели рядом с фотолокациями", "Ранние выезды на рассвет", "Разрешения на съёмку в храмах", "Консультации профессионального фотографа", "Карты лучших точек съёмки", "Гибкий график под погоду"],
+    category: "new"
   }
 ];
 
@@ -121,27 +125,59 @@ const Routes = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {routes.map((route, index) => (
-            <Card 
-              key={index} 
-              className="overflow-hidden hover-lift border-border/50 group flex flex-col japanese-border"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="relative h-56 overflow-hidden">
-                <img 
-                  src={route.image} 
-                  alt={route.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                <div className="absolute top-4 right-4 flex flex-wrap gap-2 max-w-[200px] justify-end">
-                  {route.tags.map((tag, i) => (
-                    <Badge key={i} variant="secondary" className="bg-background/90 backdrop-blur-sm text-xs">
-                      {tag}
-                    </Badge>
-                  ))}
+          {routes.map((route, index) => {
+            const getCategoryStyles = () => {
+              if (route.category === 'popular') {
+                return 'border-amber-500/40 shadow-amber-500/20';
+              }
+              if (route.category === 'new') {
+                return 'border-emerald-500/40 shadow-emerald-500/20';
+              }
+              return '';
+            };
+
+            const getCategoryBadge = () => {
+              if (route.category === 'popular') {
+                return <Badge className="absolute top-4 left-4 bg-amber-500/90 text-white backdrop-blur-sm border-amber-400/50">⭐ Популярный</Badge>;
+              }
+              if (route.category === 'new') {
+                return <Badge className="absolute top-4 left-4 bg-emerald-500/90 text-white backdrop-blur-sm border-emerald-400/50">✨ Новинка</Badge>;
+              }
+              return null;
+            };
+
+            const getImageOverlay = () => {
+              if (route.category === 'popular') {
+                return 'bg-gradient-to-t from-black/60 via-amber-900/20 to-transparent';
+              }
+              if (route.category === 'new') {
+                return 'bg-gradient-to-t from-black/60 via-emerald-900/20 to-transparent';
+              }
+              return 'bg-gradient-to-t from-black/60 to-transparent';
+            };
+
+            return (
+              <Card 
+                key={index} 
+                className={`overflow-hidden hover-lift border-border/50 group flex flex-col japanese-border shadow-lg ${getCategoryStyles()}`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="relative h-56 overflow-hidden">
+                  <img 
+                    src={route.image} 
+                    alt={route.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className={`absolute inset-0 ${getImageOverlay()}`}></div>
+                  {getCategoryBadge()}
+                  <div className="absolute top-4 right-4 flex flex-wrap gap-2 max-w-[200px] justify-end">
+                    {route.tags.map((tag, i) => (
+                      <Badge key={i} variant="secondary" className="bg-background/90 backdrop-blur-sm text-xs">
+                        {tag}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
-              </div>
               
               <CardHeader className="flex-grow">
                 <CardTitle className="text-2xl mb-2">{route.title}</CardTitle>
@@ -189,7 +225,8 @@ const Routes = () => {
                 </Button>
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
 
         <div className="mt-16 text-center space-y-6">
