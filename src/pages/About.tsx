@@ -19,7 +19,7 @@ const About = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-secondary bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground drop-shadow-sm">
               О платформе Момидзи
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
@@ -31,7 +31,7 @@ const About = () => {
           {/* Story Section */}
           <div className="max-w-3xl mx-auto mb-16 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <div className="prose prose-lg mx-auto">
-              <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Наша история</h2>
+              <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-center text-foreground">Наша история</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Название "Момидзи" (紅葉) означает "красные осенние листья клёна" на японском языке. 
                 Это слово символизирует красоту переходных моментов, внимание к деталям и гармонию 
@@ -94,7 +94,7 @@ const About = () => {
 
           {/* Technology Section */}
           <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Технологии и подход</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-foreground">Технологии и подход</h2>
             <div className="bg-gradient-to-br from-card to-card border border-primary/20 rounded-lg p-8 mb-8 japanese-border shadow-lg shadow-primary/5">
               <h3 className="font-bold text-xl mb-4 text-center text-primary">Умные рекомендации</h3>
               <p className="text-muted-foreground leading-relaxed text-center">
@@ -108,7 +108,7 @@ const About = () => {
 
           {/* Values Section */}
           <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Наши ценности</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-foreground">Наши ценности</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
@@ -141,7 +141,7 @@ const About = () => {
 
           {/* Testimonials Section */}
           <div className="max-w-5xl mx-auto mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Отзывы наших читателей</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-foreground">Отзывы наших читателей</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
@@ -197,7 +197,7 @@ const About = () => {
           {/* Team Section */}
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
-              <h2 className="text-2xl font-bold mb-4">Присоединяйтесь к нам</h2>
+              <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-foreground">Присоединяйтесь к нам</h2>
               <p className="text-muted-foreground mb-6">
                 Момидзи постоянно растёт. Если вы эксперт по Японии, создаёте контент 
                 или хотите сотрудничать с нами, мы будем рады услышать от вас.
