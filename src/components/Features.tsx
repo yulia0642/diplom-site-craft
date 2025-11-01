@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Compass, BookOpen, Languages, Sparkles } from "lucide-react";
+import { Compass, BookOpen, Languages } from "lucide-react";
 
 const features = [
   {
@@ -16,11 +16,6 @@ const features = [
     icon: Languages,
     title: "Образовательный контент",
     description: "Полезные фразы, языковые уроки и советы для комфортного общения в Японии."
-  },
-  {
-    icon: Sparkles,
-    title: "Умные рекомендации",
-    description: "ИИ-персонализация контента с сохранением человеческого опыта и экспертизы."
   }
 ];
 
@@ -38,7 +33,7 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <Card 
               key={index} 

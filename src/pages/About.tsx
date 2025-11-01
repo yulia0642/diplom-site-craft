@@ -88,6 +88,20 @@ const About = () => {
             ))}
           </div>
 
+          {/* Technology Section */}
+          <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold mb-8 text-center">Технологии и подход</h2>
+            <div className="bg-card border border-border rounded-lg p-8 mb-8 japanese-border">
+              <h3 className="font-bold text-xl mb-4 text-center">Умные рекомендации</h3>
+              <p className="text-muted-foreground leading-relaxed text-center">
+                ИИ-персонализация контента с сохранением человеческого опыта и экспертизы. 
+                Мы используем искусственный интеллект для анализа ваших предпочтений и создания 
+                персонализированных рекомендаций, но каждый материал создан реальными людьми 
+                с личным опытом путешествий по Японии.
+              </p>
+            </div>
+          </div>
+
           {/* Values Section */}
           <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
             <h2 className="text-3xl font-bold mb-8 text-center">Наши ценности</h2>
