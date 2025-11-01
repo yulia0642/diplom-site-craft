@@ -132,6 +132,61 @@ const About = () => {
             </div>
           </div>
 
+          {/* Testimonials Section */}
+          <div className="max-w-5xl mx-auto mb-16 animate-fade-in">
+            <h2 className="text-3xl font-bold mb-8 text-center">Отзывы наших читателей</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  name: "Анна Петрова",
+                  location: "Москва",
+                  text: "Благодаря Момидзи я впервые поехала в Японию подготовленной. Статьи о культуре храмов помогли избежать неловких ситуаций, а маршрут по Киото был просто идеальным!",
+                },
+                {
+                  name: "Дмитрий Соколов",
+                  location: "Санкт-Петербург",
+                  text: "Живу в Токио уже 3 года, но продолжаю читать Момидзи. Здесь всегда нахожу что-то новое — от скрытых онсенов до малоизвестных фестивалей. Настоящая находка для тех, кто хочет узнать Японию глубже.",
+                },
+                {
+                  name: "Елена Кравченко",
+                  location: "Екатеринбург",
+                  text: "Видеоблоги на платформе — это нечто! Смотрю их как сериал перед сном. Особенно понравился материал про сельскую Японию — показали то, что не увидишь в туристических брошюрах.",
+                },
+                {
+                  name: "Михаил Лебедев",
+                  location: "Новосибирск",
+                  text: "Планировал путешествие сам, но понял, что упускаю много важного. Момидзи помог составить персональный маршрут с учётом моих интересов к истории самураев. Поездка прошла безупречно!",
+                },
+                {
+                  name: "Ирина Волкова",
+                  location: "Казань",
+                  text: "Изучаю японский язык, и образовательный контент на Момидзи — отличное дополнение к учебникам. Фразы из реальной жизни, культурный контекст — всё это делает обучение живым и интересным.",
+                },
+              ].map((testimonial, index) => (
+                <div
+                  key={testimonial.name}
+                  className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-colors japanese-border animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                      <span className="text-primary font-bold text-lg">
+                        {testimonial.name.charAt(0)}
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="font-bold">{testimonial.name}</h3>
+                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                    </div>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* Team Section */}
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
