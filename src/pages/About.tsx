@@ -12,14 +12,14 @@ const About = () => {
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in japanese-border">
-            <div className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden">
+            <div className="w-32 h-32 mx-auto mb-8 rounded-full overflow-hidden ring-4 ring-primary/20 shadow-lg shadow-primary/10">
               <img
                 src={momidjiImg}
                 alt="Момидзи"
                 className="w-full h-full object-cover"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary/80 to-secondary bg-clip-text text-transparent">
               О платформе Момидзи
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
@@ -31,7 +31,7 @@ const About = () => {
           {/* Story Section */}
           <div className="max-w-3xl mx-auto mb-16 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             <div className="prose prose-lg mx-auto">
-              <h2 className="text-3xl font-bold mb-6 text-center">Наша история</h2>
+              <h2 className="text-3xl font-bold mb-6 text-center bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Наша история</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Название "Момидзи" (紅葉) означает "красные осенние листья клёна" на японском языке. 
                 Это слово символизирует красоту переходных моментов, внимание к деталям и гармонию 
@@ -52,47 +52,51 @@ const About = () => {
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto mb-16">
-            {[
-              {
-                icon: BookOpen,
-                title: "Глубокие статьи",
-                description: "Аналитические материалы о культуре, истории и современной жизни Японии",
-              },
-              {
-                icon: Video,
-                title: "Видеоблоги",
-                description: "Авторские видео от экспатов и путешественников со всей Японии",
-              },
-              {
-                icon: Heart,
-                title: "Личные маршруты",
-                description: "Персонализированные гиды для вашего идеального путешествия",
-              },
-              {
-                icon: Users,
-                title: "Сообщество",
-                description: "Активное комьюнити единомышленников и японофилов",
-              },
-            ].map((feature, index) => (
-              <div
-                key={feature.title}
-                className="text-center animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center">
-                  <feature.icon size={32} className="text-primary" />
+              {[
+                {
+                  icon: BookOpen,
+                  title: "Глубокие статьи",
+                  description: "Аналитические материалы о культуре, истории и современной жизни Японии",
+                  color: "primary",
+                },
+                {
+                  icon: Video,
+                  title: "Видеоблоги",
+                  description: "Авторские видео от экспатов и путешественников со всей Японии",
+                  color: "secondary",
+                },
+                {
+                  icon: Heart,
+                  title: "Личные маршруты",
+                  description: "Персонализированные гиды для вашего идеального путешествия",
+                  color: "accent",
+                },
+                {
+                  icon: Users,
+                  title: "Сообщество",
+                  description: "Активное комьюнити единомышленников и японофилов",
+                  color: "primary",
+                },
+              ].map((feature, index) => (
+                <div
+                  key={feature.title}
+                  className="text-center animate-fade-in group"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className={`w-16 h-16 mx-auto mb-4 bg-${feature.color}/10 rounded-full flex items-center justify-center group-hover:bg-${feature.color}/20 transition-colors shadow-lg shadow-${feature.color}/5`}>
+                    <feature.icon size={32} className={`text-${feature.color}`} />
+                  </div>
+                  <h3 className="font-bold mb-2">{feature.title}</h3>
+                  <p className="text-sm text-muted-foreground">{feature.description}</p>
                 </div>
-                <h3 className="font-bold mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
-              </div>
-            ))}
+              ))}
           </div>
 
           {/* Technology Section */}
           <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-8 text-center">Технологии и подход</h2>
-            <div className="bg-card border border-border rounded-lg p-8 mb-8 japanese-border">
-              <h3 className="font-bold text-xl mb-4 text-center">Умные рекомендации</h3>
+            <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">Технологии и подход</h2>
+            <div className="bg-gradient-to-br from-card to-card border border-primary/20 rounded-lg p-8 mb-8 japanese-border shadow-lg shadow-primary/5">
+              <h3 className="font-bold text-xl mb-4 text-center text-primary">Умные рекомендации</h3>
               <p className="text-muted-foreground leading-relaxed text-center">
                 ИИ-персонализация контента с сохранением человеческого опыта и экспертизы. 
                 Мы используем искусственный интеллект для анализа ваших предпочтений и создания 
@@ -104,28 +108,31 @@ const About = () => {
 
           {/* Values Section */}
           <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-8 text-center">Наши ценности</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Наши ценности</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
                   title: "Аутентичность",
                   description: "Только проверенная информация от людей, живущих в Японии или регулярно там бывающих",
+                  accent: "primary",
                 },
                 {
                   title: "Качество",
                   description: "Каждый материал проходит редактуру и проверку фактов перед публикацией",
+                  accent: "secondary",
                 },
                 {
                   title: "Доступность",
                   description: "Делаем японскую культуру понятной и близкой для русскоязычной аудитории",
+                  accent: "accent",
                 },
               ].map((value, index) => (
                 <div
                   key={value.title}
-                  className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-colors japanese-border"
+                  className={`bg-card border-2 border-${value.accent}/20 rounded-lg p-6 hover:border-${value.accent} hover:shadow-lg hover:shadow-${value.accent}/10 transition-all japanese-border group`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <h3 className="font-bold text-lg mb-3">{value.title}</h3>
+                  <h3 className={`font-bold text-lg mb-3 text-${value.accent} group-hover:text-${value.accent}`}>{value.title}</h3>
                   <p className="text-sm text-muted-foreground">{value.description}</p>
                 </div>
               ))}
@@ -134,7 +141,7 @@ const About = () => {
 
           {/* Testimonials Section */}
           <div className="max-w-5xl mx-auto mb-16 animate-fade-in">
-            <h2 className="text-3xl font-bold mb-8 text-center">Отзывы наших читателей</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">Отзывы наших читателей</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 {
@@ -165,11 +172,11 @@ const About = () => {
               ].map((testimonial, index) => (
                 <div
                   key={testimonial.name}
-                  className="bg-card border border-border rounded-lg p-6 hover:border-primary transition-colors japanese-border animate-fade-in"
+                  className="bg-card border-2 border-border rounded-lg p-6 hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all japanese-border animate-fade-in group"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-3">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mr-3 group-hover:from-primary/30 group-hover:to-secondary/30 transition-all">
                       <span className="text-primary font-bold text-lg">
                         {testimonial.name.charAt(0)}
                       </span>
