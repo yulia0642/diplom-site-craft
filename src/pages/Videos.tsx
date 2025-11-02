@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Play, Clock, Calendar } from "lucide-react";
+import { Play, Clock, Calendar, FileText, BookOpen, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import tokyoVlogImg from "@/assets/vlog-tokyo-24h.jpg";
 import kyotoSecretImg from "@/assets/vlog-kyoto-secret.jpg";
 import shrineEtiquetteImg from "@/assets/vlog-shrine-etiquette.jpg";
@@ -181,6 +182,37 @@ const Videos = () => {
                 <Play size={20} />
                 Подписаться на канал
               </Button>
+            </div>
+          </div>
+
+          {/* Related Content Section */}
+          <div className="mt-12 max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-center mb-6">Больше контента</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              <Link to="/articles" className="group">
+                <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all">
+                  <FileText className="w-8 h-8 text-primary mb-3" />
+                  <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Статьи</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Углублённые материалы о Японии
+                  </p>
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                    Читать <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </Link>
+              <Link to="/books" className="group">
+                <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all">
+                  <BookOpen className="w-8 h-8 text-primary mb-3" />
+                  <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Книги</h3>
+                  <p className="text-sm text-muted-foreground mb-3">
+                    Лучшие издания о японской культуре
+                  </p>
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                    Посмотреть <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </Link>
             </div>
           </div>
         </div>

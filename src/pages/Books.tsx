@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, FileText, Compass, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import booksImg from "@/assets/books-japan.jpg";
 
 const books = [
@@ -143,6 +144,39 @@ const Books = () => {
                 качественный контент о Японии на русском языке. Часть средств идёт на развитие 
                 платформы Момидзи.
               </p>
+            </div>
+          </div>
+
+          {/* Related Content Section */}
+          <div className="mt-12 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-center mb-6">Вдохновение для путешествия</h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                <Link to="/articles" className="group">
+                  <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all">
+                    <FileText className="w-8 h-8 text-primary mb-3" />
+                    <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Статьи о культуре</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Читайте о традициях и истории
+                    </p>
+                    <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                      Читать <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+                <Link to="/travel" className="group">
+                  <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all">
+                    <Compass className="w-8 h-8 text-primary mb-3" />
+                    <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Готовые маршруты</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Спланируйте своё путешествие
+                    </p>
+                    <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                      Выбрать маршрут <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

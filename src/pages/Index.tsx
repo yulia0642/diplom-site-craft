@@ -6,7 +6,8 @@ import AppPromo from "@/components/AppPromo";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Book, Video, FileText, Users, Globe, Heart } from "lucide-react";
+import { Book, Video, FileText, Users, Globe, Heart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const benefits = [
@@ -84,6 +85,62 @@ const Index = () => {
                 </Card>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links Section */}
+      <section className="py-16 bg-secondary/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Исследуйте контент</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Погрузитесь в мир Японии через наши статьи, видео и книги
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link to="/articles" className="group">
+              <Card className="hover-lift transition-all border-2 hover:border-primary">
+                <CardContent className="p-6 text-center">
+                  <FileText className="w-12 h-12 mx-auto mb-4 text-primary" />
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Статьи</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Глубокие материалы о культуре и традициях
+                  </p>
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                    Читать статьи <ArrowRight className="w-4 h-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/videos" className="group">
+              <Card className="hover-lift transition-all border-2 hover:border-primary">
+                <CardContent className="p-6 text-center">
+                  <Video className="w-12 h-12 mx-auto mb-4 text-primary" />
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Видео</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Авторские влоги из Японии
+                  </p>
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                    Смотреть видео <ArrowRight className="w-4 h-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/books" className="group">
+              <Card className="hover-lift transition-all border-2 hover:border-primary">
+                <CardContent className="p-6 text-center">
+                  <Book className="w-12 h-12 mx-auto mb-4 text-primary" />
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Книги</h3>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Избранные издания о Японии
+                  </p>
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                    Смотреть книги <ArrowRight className="w-4 h-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>

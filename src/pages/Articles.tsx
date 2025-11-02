@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
+import { Video, Book, ArrowRight } from "lucide-react";
 import teaCeremonyImg from "@/assets/tea-ceremony.jpg";
 import tokyoFoodImg from "@/assets/tokyo-food.jpg";
 import onsenImg from "@/assets/onsen-autumn.jpg";
@@ -88,6 +89,39 @@ const Articles = () => {
                 </Link>
               </article>
             ))}
+          </div>
+
+          {/* Related Content Section */}
+          <div className="mt-20 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
+              <h2 className="text-2xl font-bold text-center mb-6">Продолжите изучение</h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                <Link to="/videos" className="group">
+                  <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all">
+                    <Video className="w-8 h-8 text-primary mb-3" />
+                    <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Видеоблоги</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Смотрите видео о жизни в Японии
+                    </p>
+                    <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                      Смотреть <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+                <Link to="/books" className="group">
+                  <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all">
+                    <Book className="w-8 h-8 text-primary mb-3" />
+                    <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Книги</h3>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Углубитесь в японскую культуру
+                    </p>
+                    <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                      Посмотреть <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </main>

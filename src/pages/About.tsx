@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Heart, Users, BookOpen, Video } from "lucide-react";
+import { Heart, Users, BookOpen, Video, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import momidjiImg from "@/assets/momiji-logo.jpg";
 
 const About = () => {
@@ -208,6 +209,49 @@ const About = () => {
               >
                 contact@momidji.com
               </a>
+            </div>
+          </div>
+
+          {/* Quick Links to Content */}
+          <div className="mt-12 max-w-5xl mx-auto">
+            <h2 className="text-2xl font-bold text-center mb-8">Начните изучение</h2>
+            <div className="grid md:grid-cols-4 gap-4">
+              <Link to="/articles" className="group">
+                <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all text-center">
+                  <BookOpen className="w-10 h-10 text-primary mx-auto mb-3" />
+                  <h3 className="font-bold mb-1 group-hover:text-primary transition-colors">Статьи</h3>
+                  <span className="text-xs text-primary font-medium inline-flex items-center gap-1">
+                    Читать <ArrowRight className="w-3 h-3" />
+                  </span>
+                </div>
+              </Link>
+              <Link to="/videos" className="group">
+                <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all text-center">
+                  <Video className="w-10 h-10 text-primary mx-auto mb-3" />
+                  <h3 className="font-bold mb-1 group-hover:text-primary transition-colors">Видео</h3>
+                  <span className="text-xs text-primary font-medium inline-flex items-center gap-1">
+                    Смотреть <ArrowRight className="w-3 h-3" />
+                  </span>
+                </div>
+              </Link>
+              <Link to="/books" className="group">
+                <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all text-center">
+                  <Heart className="w-10 h-10 text-primary mx-auto mb-3" />
+                  <h3 className="font-bold mb-1 group-hover:text-primary transition-colors">Книги</h3>
+                  <span className="text-xs text-primary font-medium inline-flex items-center gap-1">
+                    Купить <ArrowRight className="w-3 h-3" />
+                  </span>
+                </div>
+              </Link>
+              <Link to="/travel" className="group">
+                <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all text-center">
+                  <Users className="w-10 h-10 text-primary mx-auto mb-3" />
+                  <h3 className="font-bold mb-1 group-hover:text-primary transition-colors">Маршруты</h3>
+                  <span className="text-xs text-primary font-medium inline-flex items-center gap-1">
+                    Создать <ArrowRight className="w-3 h-3" />
+                  </span>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
