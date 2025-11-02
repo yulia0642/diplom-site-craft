@@ -9,6 +9,7 @@ import Articles from "./pages/Articles";
 import ArticleDetail from "./pages/ArticleDetail";
 import Books from "./pages/Books";
 import Videos from "./pages/Videos";
+import Travel from "./pages/Travel";
 import About from "./pages/About";
 import CreateRoute from "./pages/CreateRoute";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/articles/:id" element={<ArticleDetail />} />
             <Route path="/books" element={<Books />} />
             <Route path="/videos" element={<Videos />} />
+            <Route path="/travel" element={<Travel />} />
             <Route path="/about" element={<About />} />
             <Route path="/create-route" element={<CreateRoute />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -16,6 +16,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.articles': 'Статьи',
     'nav.books': 'Книги',
     'nav.videos': 'Видеоблоги',
+    'nav.travel': 'Путешествия',
     'nav.about': 'О платформе',
   },
   en: {
@@ -23,6 +24,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.articles': 'Articles',
     'nav.books': 'Books',
     'nav.videos': 'Video Blogs',
+    'nav.travel': 'Travel',
     'nav.about': 'About',
   },
 };
