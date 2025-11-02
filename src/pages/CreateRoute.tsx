@@ -174,15 +174,11 @@ const CreateRoute = () => {
                         <Checkbox
                           id={interest.id}
                           checked={selectedInterests.includes(interest.id)}
-                          onCheckedChange={() => handleInterestToggle(interest.id)}
                         />
                         <Icon className={`w-5 h-5 ${selectedInterests.includes(interest.id) ? "text-primary" : "text-muted-foreground"}`} />
-                        <Label
-                          htmlFor={interest.id}
-                          className="flex-1 cursor-pointer font-medium"
-                        >
+                        <span className="flex-1 font-medium">
                           {interest.label}
-                        </Label>
+                        </span>
                       </div>
                     );
                   })}
