@@ -169,16 +169,25 @@ const CreateRoute = () => {
                             ? "border-primary bg-primary/5"
                             : "border-border"
                         }`}
-                        onClick={() => handleInterestToggle(interest.id)}
                       >
                         <Checkbox
                           id={interest.id}
                           checked={selectedInterests.includes(interest.id)}
+                          onCheckedChange={() => {
+                            try {
+                              handleInterestToggle(interest.id);
+                            } catch (e) {
+                              console.error("Interest toggle error", e);
+                            }
+                          }}
                         />
                         <Icon className={`w-5 h-5 ${selectedInterests.includes(interest.id) ? "text-primary" : "text-muted-foreground"}`} />
-                        <span className="flex-1 font-medium">
+                        <Label
+                          htmlFor={interest.id}
+                          className="flex-1 cursor-pointer font-medium"
+                        >
                           {interest.label}
-                        </span>
+                        </Label>
                       </div>
                     );
                   })}
