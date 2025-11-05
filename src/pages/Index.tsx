@@ -8,10 +8,8 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Book, Video, FileText, Users, Globe, Heart, ArrowRight, Sparkles, Mountain, Coffee, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
-import zenGarden from "@/assets/zen-garden.jpg";
-import teaCeremony from "@/assets/tea-ceremony.jpg";
-import spiritualTemple from "@/assets/spiritual-temple.jpg";
-import zenNature from "@/assets/zen-nature.jpg";
+import zenMeditationMonk from "@/assets/zen-meditation-monk.jpg";
+import matchaCeremony from "@/assets/matcha-ceremony.jpg";
 
 const Index = () => {
   const benefits = [
@@ -165,8 +163,8 @@ const Index = () => {
             <Card className="overflow-hidden hover-lift animate-fade-up">
               <div className="aspect-video overflow-hidden">
                 <img 
-                  src={zenGarden} 
-                  alt="Японский сад камней" 
+                  src={zenMeditationMonk} 
+                  alt="Монах в медитации в японском храме"
                   className="w-full h-full object-cover transition-transform hover:scale-105"
                 />
               </div>
@@ -185,8 +183,8 @@ const Index = () => {
             <Card className="overflow-hidden hover-lift animate-fade-up" style={{ animationDelay: '0.1s' }}>
               <div className="aspect-video overflow-hidden">
                 <img 
-                  src={teaCeremony} 
-                  alt="Традиционная чайная церемония" 
+                  src={matchaCeremony} 
+                  alt="Приготовление матча в традиционной чайной церемонии"
                   className="w-full h-full object-cover transition-transform hover:scale-105"
                 />
               </div>
