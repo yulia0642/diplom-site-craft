@@ -6,8 +6,12 @@ import AppPromo from "@/components/AppPromo";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Book, Video, FileText, Users, Globe, Heart, ArrowRight } from "lucide-react";
+import { Book, Video, FileText, Users, Globe, Heart, ArrowRight, Sparkles, Mountain, Coffee, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
+import zenGarden from "@/assets/zen-garden.jpg";
+import teaCeremony from "@/assets/tea-ceremony.jpg";
+import spiritualTemple from "@/assets/spiritual-temple.jpg";
+import zenNature from "@/assets/zen-nature.jpg";
 
 const Index = () => {
   const benefits = [
@@ -141,6 +145,177 @@ const Index = () => {
                 </CardContent>
               </Card>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Japanese Culture Insights */}
+      <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
+              Погружение в японскую культуру
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Откройте для себя глубину традиций, философии и образа жизни Японии
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+            <Card className="overflow-hidden hover-lift animate-fade-up">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={zenGarden} 
+                  alt="Японский сад камней" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Sparkles className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl font-bold">Философия Дзен</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Японская философия Дзен учит находить красоту в простоте и гармонию в повседневности. 
+                  Сады камней, чайные церемонии и искусство каллиграфии — всё это пути к внутреннему спокойствию.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="overflow-hidden hover-lift animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={teaCeremony} 
+                  alt="Традиционная чайная церемония" 
+                  className="w-full h-full object-cover transition-transform hover:scale-105"
+                />
+              </div>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <Coffee className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl font-bold">Чайная церемония</h3>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Садо (茶道) — это не просто чаепитие, а целое искусство, воплощающее принципы гармонии, 
+                  уважения, чистоты и спокойствия. Каждое движение имеет глубокий смысл.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Japanese Language & Traditions */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="japanese-border hover-lift animate-fade-up">
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <BookOpen className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Японский язык</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Три системы письменности — хирагана, катакана и кандзи — отражают сложность и красоту японского языка. 
+                  Изучение языка открывает двери к пониманию культуры.
+                </p>
+                <div className="text-3xl font-serif text-primary mb-2">
+                  日本語
+                </div>
+                <p className="text-sm text-muted-foreground">Нихонго (японский язык)</p>
+              </CardContent>
+            </Card>
+
+            <Card className="japanese-border hover-lift animate-fade-up" style={{ animationDelay: '0.1s' }}>
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Mountain className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Сезоны и природа</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  В Японии особое отношение к смене времён года. Цветение сакуры весной, 
+                  осенние клёны момидзи, зимние снежные пейзажи — каждый сезон воспевается в искусстве.
+                </p>
+                <div className="text-3xl font-serif text-primary mb-2">
+                  四季
+                </div>
+                <p className="text-sm text-muted-foreground">Сики (четыре сезона)</p>
+              </CardContent>
+            </Card>
+
+            <Card className="japanese-border hover-lift animate-fade-up" style={{ animationDelay: '0.2s' }}>
+              <CardContent className="p-6">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Sparkles className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Ваби-саби</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Эстетическая концепция, находящая красоту в несовершенстве, простоте и быстротечности. 
+                  Ваби-саби учит ценить естественность и принимать непостоянство жизни.
+                </p>
+                <div className="text-3xl font-serif text-primary mb-2">
+                  侘寂
+                </div>
+                <p className="text-sm text-muted-foreground">Ваби-саби</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Interesting Facts */}
+      <section className="py-20 wave-pattern">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
+              Интересные факты о Японии
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Удивительные особенности страны восходящего солнца
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {[
+              {
+                number: "6,852",
+                label: "островов",
+                description: "составляют Японский архипелаг, хотя большинство населения живёт на четырёх главных островах"
+              },
+              {
+                number: "3,000+",
+                label: "иероглифов",
+                description: "используется в современном японском языке, включая кандзи, хирагану и катакану"
+              },
+              {
+                number: "21",
+                label: "объектов ЮНЕСКО",
+                description: "включая святилища, храмы, замки и природные памятники находятся под охраной"
+              },
+              {
+                number: "127 млн",
+                label: "жителей",
+                description: "проживает в Японии, одной из самых густонаселённых стран мира"
+              }
+            ].map((fact, index) => (
+              <Card 
+                key={index}
+                className="text-center hover-lift animate-fade-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <CardContent className="p-6">
+                  <div className="text-4xl font-bold text-primary mb-2">
+                    {fact.number}
+                  </div>
+                  <div className="text-lg font-semibold mb-3 text-foreground">
+                    {fact.label}
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {fact.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
