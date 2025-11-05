@@ -6,7 +6,7 @@ import AppPromo from "@/components/AppPromo";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Book, Video, FileText, Users, Globe, Heart, ArrowRight, Sparkles, Mountain, Coffee, BookOpen } from "lucide-react";
+import { Book, Video, FileText, Users, Globe, Heart, ArrowRight, Sparkles, Mountain, Coffee, BookOpen, Map, Calendar, Languages, Utensils, Train, Building2, Cherry } from "lucide-react";
 import { Link } from "react-router-dom";
 import zenMeditationMonk from "@/assets/zen-meditation-monk.jpg";
 import matchaCeremony from "@/assets/matcha-ceremony.jpg";
@@ -257,6 +257,162 @@ const Index = () => {
                 <p className="text-sm text-muted-foreground">Ваби-саби</p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Japan Geography Infographic */}
+      <section className="py-20 bg-gradient-to-b from-secondary/20 to-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
+              География Японии
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Островное государство с уникальным географическим положением
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-6 mb-12">
+              {[
+                {
+                  icon: Map,
+                  title: "4 главных острова",
+                  items: ["Хонсю", "Хоккайдо", "Кюсю", "Сикоку"],
+                  color: "text-blue-500"
+                },
+                {
+                  icon: Building2,
+                  title: "Крупнейшие города",
+                  items: ["Токио", "Осака", "Киото", "Нагоя"],
+                  color: "text-purple-500"
+                },
+                {
+                  icon: Mountain,
+                  title: "Горы",
+                  items: ["70% территории", "Гора Фудзи 3776м", "110 вулканов", "Онсены"],
+                  color: "text-orange-500"
+                },
+                {
+                  icon: Cherry,
+                  title: "Климат",
+                  items: ["4 сезона", "Весна: сакура", "Осень: момидзи", "Зима: снег"],
+                  color: "text-pink-500"
+                }
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <Card 
+                    key={index}
+                    className="hover-lift animate-fade-up"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <CardContent className="p-6">
+                      <Icon className={`w-10 h-10 mb-4 ${item.color}`} />
+                      <h3 className="text-lg font-bold mb-4">{item.title}</h3>
+                      <ul className="space-y-2">
+                        {item.items.map((listItem, i) => (
+                          <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
+                            <span className={`w-1.5 h-1.5 rounded-full ${item.color.replace('text-', 'bg-')}`} />
+                            {listItem}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cultural Elements Timeline */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
+              Культурные традиции
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Элементы, которые формируют японскую идентичность
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                icon: Utensils,
+                title: "Японская кухня",
+                subtitle: "和食 Васёку",
+                items: ["Суши и сашими", "Рамен", "Темпура", "Вагаси (сладости)"],
+                badge: "ЮНЕСКО"
+              },
+              {
+                icon: Train,
+                title: "Транспорт",
+                subtitle: "新幹線 Синкансэн",
+                items: ["Скоростные поезда", "320 км/ч", "Пунктуальность", "Технологии"],
+                badge: "Инновации"
+              },
+              {
+                icon: Languages,
+                title: "Система письменности",
+                subtitle: "文字 Модзи",
+                items: ["Хирагана (46 знаков)", "Катакана (46 знаков)", "Кандзи (2000+ знаков)", "Ромадзи"],
+                badge: "Уникально"
+              },
+              {
+                icon: Calendar,
+                title: "Праздники",
+                subtitle: "祝日 Сюкудзицу",
+                items: ["Новый год (Сёгацу)", "Ханами (сакура)", "Обон", "Момидзи-гари"],
+                badge: "Традиции"
+              },
+              {
+                icon: Building2,
+                title: "Архитектура",
+                subtitle: "建築 Кэнтику",
+                items: ["Традиционные храмы", "Современные небоскрёбы", "Сады", "Минимализм"],
+                badge: "Гармония"
+              },
+              {
+                icon: Heart,
+                title: "Ценности",
+                subtitle: "価値観 Качикан",
+                items: ["Уважение (敬)", "Гармония (和)", "Чистота (清)", "Спокойствие (静)"],
+                badge: "Философия"
+              }
+            ].map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <Card 
+                  key={index}
+                  className="japanese-border hover-lift animate-fade-up relative overflow-hidden"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="absolute top-4 right-4">
+                    <span className="text-xs font-semibold px-2 py-1 rounded-full bg-primary/10 text-primary">
+                      {item.badge}
+                    </span>
+                  </div>
+                  <CardContent className="p-6">
+                    <Icon className="w-10 h-10 text-primary mb-3" />
+                    <h3 className="text-xl font-bold mb-1">{item.title}</h3>
+                    <p className="text-sm text-primary mb-4 font-serif">{item.subtitle}</p>
+                    <ul className="space-y-2">
+                      {item.items.map((listItem, i) => (
+                        <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <ArrowRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>{listItem}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
