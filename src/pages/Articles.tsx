@@ -61,34 +61,40 @@ const Articles = () => {
 
           {/* Articles Grid */}
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {articles.map((article, index) => (
-              <article
-                key={article.id}
-                className="group cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <Link to={`/articles/${article.id}`} className="block">
-                  <div className="overflow-hidden rounded-lg mb-4 japanese-border">
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                      <span>{article.date}</span>
-                      <span>•</span>
-                      <span>{article.readTime} чтения</span>
+            {articles.map((article, index) => {
+              const accentColors = ["blue-500", "purple-500", "orange-500", "pink-500"];
+              const accentColor = accentColors[index % accentColors.length];
+              return (
+                <article
+                  key={article.id}
+                  className="group cursor-pointer animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <Link to={`/articles/${article.id}`} className="block">
+                    <div className="relative overflow-hidden rounded-lg mb-4 japanese-border">
+                      <img
+                        src={article.image}
+                        alt={article.title}
+                        className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className={`absolute top-4 right-4 w-2 h-2 rounded-full bg-${accentColor} shadow-lg shadow-${accentColor}/50`} />
                     </div>
-                    <h2 className="text-2xl font-bold group-hover:text-primary transition-colors">
-                      {article.title}
-                    </h2>
-                    <p className="text-muted-foreground">{article.excerpt}</p>
-                  </div>
-                </Link>
-              </article>
-            ))}
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                        <span className={`px-2 py-1 rounded-full bg-${accentColor}/10 text-${accentColor} text-xs font-semibold`}>
+                          {article.date}
+                        </span>
+                        <span>{article.readTime} чтения</span>
+                      </div>
+                      <h2 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                        {article.title}
+                      </h2>
+                      <p className="text-muted-foreground">{article.excerpt}</p>
+                    </div>
+                  </Link>
+                </article>
+              );
+            })}
           </div>
 
           {/* Related Content Section */}

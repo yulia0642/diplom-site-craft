@@ -96,43 +96,58 @@ const Books = () => {
 
           {/* Books Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {books.map((book, index) => (
-              <div
-                key={book.id}
-                className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 hover:shadow-lg animate-fade-in japanese-border"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="p-6 space-y-4">
-                  <div>
-                    <h3 className="text-xl font-bold mb-2">{book.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-1">
-                      Автор: {book.author}
-                    </p>
-                    <div className="flex gap-3 text-xs text-muted-foreground">
-                      <span>{book.pages}</span>
-                      <span>•</span>
-                      <span>{book.year}</span>
+            {books.map((book, index) => {
+              const categories = [
+                { name: "Культура", color: "blue-500" },
+                { name: "Путешествия", color: "purple-500" },
+                { name: "Кулинария", color: "orange-500" },
+                { name: "Духовность", color: "pink-500" },
+                { name: "Язык", color: "blue-500" },
+                { name: "Природа", color: "purple-500" }
+              ];
+              const category = categories[index % categories.length];
+              return (
+                <div
+                  key={book.id}
+                  className={`bg-card rounded-lg overflow-hidden border-2 border-${category.color}/20 hover:border-${category.color}/50 transition-all duration-300 hover:shadow-lg animate-fade-in japanese-border relative`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-${category.color} to-${category.color}/50`} />
+                  <div className="p-6 space-y-4">
+                    <div>
+                      <div className={`inline-block px-3 py-1 rounded-full bg-${category.color}/10 text-${category.color} text-xs font-semibold mb-3`}>
+                        {category.name}
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{book.title}</h3>
+                      <p className="text-sm text-muted-foreground mb-1">
+                        Автор: {book.author}
+                      </p>
+                      <div className="flex gap-3 text-xs text-muted-foreground">
+                        <span>{book.pages}</span>
+                        <span>•</span>
+                        <span>{book.year}</span>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <p className="text-sm text-muted-foreground">
-                    {book.description}
-                  </p>
-                  
-                  <div className="pt-4 border-t border-border">
-                    <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold text-primary">
-                        {book.price}
-                      </span>
-                      <Button className="gap-2">
-                        Купить
-                        <ExternalLink size={16} />
-                      </Button>
+                    
+                    <p className="text-sm text-muted-foreground">
+                      {book.description}
+                    </p>
+                    
+                    <div className="pt-4 border-t border-border">
+                      <div className="flex items-center justify-between">
+                        <span className="text-2xl font-bold text-primary">
+                          {book.price}
+                        </span>
+                        <Button className="gap-2">
+                          Купить
+                          <ExternalLink size={16} />
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Info Section */}

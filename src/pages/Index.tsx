@@ -67,15 +67,24 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {benefits.map((benefit, index) => {
               const Icon = benefit.icon;
+              const colors = [
+                { bg: "bg-blue-500/10", text: "text-blue-500", border: "border-blue-500/20" },
+                { bg: "bg-purple-500/10", text: "text-purple-500", border: "border-purple-500/20" },
+                { bg: "bg-orange-500/10", text: "text-orange-500", border: "border-orange-500/20" },
+                { bg: "bg-pink-500/10", text: "text-pink-500", border: "border-pink-500/20" },
+                { bg: "bg-blue-500/10", text: "text-blue-500", border: "border-blue-500/20" },
+                { bg: "bg-purple-500/10", text: "text-purple-500", border: "border-purple-500/20" }
+              ];
+              const color = colors[index % colors.length];
               return (
                 <Card 
                   key={index} 
-                  className="japanese-border hover-lift animate-fade-up"
+                  className={`japanese-border hover-lift animate-fade-up border-2 ${color.border} hover:border-opacity-50 transition-all`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-primary" />
+                    <div className={`w-12 h-12 rounded-lg ${color.bg} flex items-center justify-center mb-4`}>
+                      <Icon className={`w-6 h-6 ${color.text}`} />
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-foreground">
                       {benefit.title}

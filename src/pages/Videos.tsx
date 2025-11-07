@@ -132,42 +132,54 @@ const Videos = () => {
 
           {/* Videos Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {videos.map((video, index) => (
-              <div
-                key={video.id}
-                className="group cursor-pointer animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="relative overflow-hidden rounded-lg mb-3">
-                  <img
-                    src={video.thumbnail}
-                    alt={video.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
-                    <div className="w-14 h-14 bg-primary/0 group-hover:bg-primary/90 rounded-full flex items-center justify-center transition-all">
-                      <Play size={24} className="text-white opacity-0 group-hover:opacity-100 ml-1" fill="white" />
+            {videos.map((video, index) => {
+              const badgeColors = [
+                { bg: "bg-blue-500", text: "text-white", ring: "ring-blue-500/30" },
+                { bg: "bg-purple-500", text: "text-white", ring: "ring-purple-500/30" },
+                { bg: "bg-orange-500", text: "text-white", ring: "ring-orange-500/30" },
+                { bg: "bg-pink-500", text: "text-white", ring: "ring-pink-500/30" }
+              ];
+              const badge = badgeColors[index % badgeColors.length];
+              return (
+                <div
+                  key={video.id}
+                  className="group cursor-pointer animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="relative overflow-hidden rounded-lg mb-3 ring-2 ring-transparent hover:ring-primary/20 transition-all">
+                    <img
+                      src={video.thumbnail}
+                      alt={video.title}
+                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                      <div className="w-14 h-14 bg-primary/0 group-hover:bg-primary/90 rounded-full flex items-center justify-center transition-all">
+                        <Play size={24} className="text-white opacity-0 group-hover:opacity-100 ml-1" fill="white" />
+                      </div>
+                    </div>
+                    <div className={`absolute top-2 left-2 ${badge.bg} ${badge.text} px-3 py-1 rounded-full text-xs font-semibold ring-2 ${badge.ring}`}>
+                      Новое
+                    </div>
+                    <div className="absolute bottom-2 right-2 bg-black/80 px-2 py-1 rounded text-xs text-white flex items-center gap-1">
+                      <Clock size={12} />
+                      {video.duration}
                     </div>
                   </div>
-                  <div className="absolute bottom-2 right-2 bg-black/80 px-2 py-1 rounded text-xs text-white flex items-center gap-1">
-                    <Clock size={12} />
-                    {video.duration}
+                  
+                  <div className="space-y-1">
+                    <h3 className="font-bold group-hover:text-primary transition-colors line-clamp-2">
+                      {video.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">{video.creator}</p>
+                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                      <span>{video.views} просмотров</span>
+                      <span>•</span>
+                      <span>{video.date}</span>
+                    </div>
                   </div>
                 </div>
-                
-                <div className="space-y-1">
-                  <h3 className="font-bold group-hover:text-primary transition-colors line-clamp-2">
-                    {video.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{video.creator}</p>
-                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span>{video.views} просмотров</span>
-                    <span>•</span>
-                    <span>{video.date}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* CTA Section */}
