@@ -101,43 +101,43 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <Link to="/articles" className="group">
-              <Card className="hover-lift transition-all border-2 hover:border-primary">
-                <CardContent className="p-6 text-center">
+            <Link to="/articles" className="group h-full">
+              <Card className="hover-lift transition-all border-2 hover:border-primary h-full">
+                <CardContent className="p-6 text-center flex flex-col h-full">
                   <FileText className="w-12 h-12 mx-auto mb-4 text-primary" />
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Статьи</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
                     Глубокие материалы о культуре и традициях
                   </p>
-                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2 justify-center">
                     Читать статьи <ArrowRight className="w-4 h-4" />
                   </span>
                 </CardContent>
               </Card>
             </Link>
-            <Link to="/videos" className="group">
-              <Card className="hover-lift transition-all border-2 hover:border-primary">
-                <CardContent className="p-6 text-center">
+            <Link to="/videos" className="group h-full">
+              <Card className="hover-lift transition-all border-2 hover:border-primary h-full">
+                <CardContent className="p-6 text-center flex flex-col h-full">
                   <Video className="w-12 h-12 mx-auto mb-4 text-primary" />
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Видео</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
                     Авторские влоги из Японии
                   </p>
-                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2 justify-center">
                     Смотреть видео <ArrowRight className="w-4 h-4" />
                   </span>
                 </CardContent>
               </Card>
             </Link>
-            <Link to="/books" className="group">
-              <Card className="hover-lift transition-all border-2 hover:border-primary">
-                <CardContent className="p-6 text-center">
+            <Link to="/books" className="group h-full">
+              <Card className="hover-lift transition-all border-2 hover:border-primary h-full">
+                <CardContent className="p-6 text-center flex flex-col h-full">
                   <Book className="w-12 h-12 mx-auto mb-4 text-primary" />
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Книги</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
                     Избранные издания о Японии
                   </p>
-                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2 justify-center">
                     Смотреть книги <ArrowRight className="w-4 h-4" />
                   </span>
                 </CardContent>
