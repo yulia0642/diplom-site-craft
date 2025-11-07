@@ -262,60 +262,108 @@ const Index = () => {
       </section>
 
       {/* Japan Geography Infographic */}
-      <section className="py-20 bg-gradient-to-b from-secondary/20 to-background">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-b from-secondary/20 to-background relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-up">
+            <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
+              <span className="text-primary font-semibold text-sm">🗾 География</span>
+            </div>
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
-              География Японии
+              Япония в цифрах
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Островное государство с уникальным географическим положением
             </p>
           </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-6 mb-12">
+          <div className="max-w-7xl mx-auto">
+            {/* Main Stats Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {[
                 {
                   icon: Map,
-                  title: "4 главных острова",
-                  items: ["Хонсю", "Хоккайдо", "Кюсю", "Сикоку"],
-                  color: "text-blue-500"
+                  number: "6,852",
+                  label: "островов",
+                  subtitle: "4 главных острова",
+                  details: ["Хонсю (самый большой)", "Хоккайдо (север)", "Кюсю (юг)", "Сикоку (наименьший)"],
+                  gradient: "from-blue-500/20 to-cyan-500/20",
+                  iconColor: "text-blue-500",
+                  accentColor: "bg-blue-500"
                 },
                 {
                   icon: Building2,
-                  title: "Крупнейшие города",
-                  items: ["Токио", "Осака", "Киото", "Нагоя"],
-                  color: "text-purple-500"
+                  number: "127M",
+                  label: "населения",
+                  subtitle: "Мегаполисы",
+                  details: ["Токио (14M жителей)", "Осака (2.7M)", "Киото (1.5M)", "Нагоя (2.3M)"],
+                  gradient: "from-purple-500/20 to-pink-500/20",
+                  iconColor: "text-purple-500",
+                  accentColor: "bg-purple-500"
                 },
                 {
                   icon: Mountain,
-                  title: "Горы",
-                  items: ["70% территории", "Гора Фудзи 3776м", "110 вулканов", "Онсены"],
-                  color: "text-orange-500"
+                  number: "70%",
+                  label: "гор",
+                  subtitle: "Горная местность",
+                  details: ["Гора Фудзи 3,776м", "110+ активных вулканов", "Онсены (горячие источники)", "Горнолыжные курорты"],
+                  gradient: "from-orange-500/20 to-red-500/20",
+                  iconColor: "text-orange-500",
+                  accentColor: "bg-orange-500"
                 },
                 {
                   icon: Cherry,
-                  title: "Климат",
-                  items: ["4 сезона", "Весна: сакура", "Осень: момидзи", "Зима: снег"],
-                  color: "text-pink-500"
+                  number: "4",
+                  label: "сезона",
+                  subtitle: "Климатические зоны",
+                  details: ["Весна: цветение сакуры", "Лето: фестивали мацури", "Осень: момидзи (клёны)", "Зима: снежные пейзажи"],
+                  gradient: "from-pink-500/20 to-rose-500/20",
+                  iconColor: "text-pink-500",
+                  accentColor: "bg-pink-500"
                 }
               ].map((item, index) => {
                 const Icon = item.icon;
                 return (
                   <Card 
                     key={index}
-                    className="hover-lift animate-fade-up"
+                    className={`relative overflow-hidden hover-lift animate-fade-up border-2 hover:border-primary/50 transition-all duration-300 bg-gradient-to-br ${item.gradient}`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <CardContent className="p-6">
-                      <Icon className={`w-10 h-10 mb-4 ${item.color}`} />
-                      <h3 className="text-lg font-bold mb-4">{item.title}</h3>
+                      {/* Icon Badge */}
+                      <div className="absolute top-4 right-4 w-12 h-12 rounded-full bg-background/80 backdrop-blur-sm flex items-center justify-center">
+                        <Icon className={`w-6 h-6 ${item.iconColor}`} />
+                      </div>
+                      
+                      {/* Main Number */}
+                      <div className="mb-2">
+                        <div className="text-4xl md:text-5xl font-extrabold text-foreground mb-1">
+                          {item.number}
+                        </div>
+                        <div className="text-lg font-semibold text-muted-foreground uppercase tracking-wide">
+                          {item.label}
+                        </div>
+                      </div>
+
+                      {/* Divider */}
+                      <div className={`h-1 w-16 ${item.accentColor} rounded-full mb-4`} />
+
+                      {/* Subtitle */}
+                      <h3 className="text-sm font-bold mb-3 text-foreground uppercase tracking-wider">
+                        {item.subtitle}
+                      </h3>
+
+                      {/* Details List */}
                       <ul className="space-y-2">
-                        {item.items.map((listItem, i) => (
-                          <li key={i} className="text-sm text-muted-foreground flex items-center gap-2">
-                            <span className={`w-1.5 h-1.5 rounded-full ${item.color.replace('text-', 'bg-')}`} />
-                            {listItem}
+                        {item.details.map((detail, i) => (
+                          <li key={i} className="text-xs text-muted-foreground flex items-start gap-2">
+                            <span className={`w-1 h-1 rounded-full ${item.accentColor} mt-1.5 flex-shrink-0`} />
+                            <span className="leading-relaxed">{detail}</span>
                           </li>
                         ))}
                       </ul>
@@ -324,6 +372,26 @@ const Index = () => {
                 );
               })}
             </div>
+
+            {/* Additional Info Banner */}
+            <Card className="japanese-border bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 animate-fade-up">
+              <CardContent className="p-8">
+                <div className="grid md:grid-cols-3 gap-8 text-center">
+                  <div>
+                    <div className="text-3xl font-bold text-foreground mb-2">377,975 км²</div>
+                    <div className="text-sm text-muted-foreground">Общая площадь</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-foreground mb-2">29,751 км</div>
+                    <div className="text-sm text-muted-foreground">Длина береговой линии</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold text-foreground mb-2">47</div>
+                    <div className="text-sm text-muted-foreground">Префектур</div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
