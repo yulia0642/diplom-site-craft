@@ -213,8 +213,14 @@ const Index = () => {
       </section>
 
       {/* Japanese Language & Traditions */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-b from-secondary/20 to-background relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 right-10 w-64 h-64 bg-primary rounded-full blur-3xl" />
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="japanese-border hover-lift animate-fade-up">
               <CardContent className="p-6">
@@ -406,8 +412,14 @@ const Index = () => {
       </section>
 
       {/* Cultural Elements Timeline */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
               Культурные традиции
