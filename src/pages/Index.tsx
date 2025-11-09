@@ -52,8 +52,14 @@ const Index = () => {
       <Features />
       
       {/* Platform Benefits Section */}
-      <section className="py-20 wave-pattern">
-        <div className="container mx-auto px-4">
+      <section className="py-20 wave-pattern relative overflow-hidden bg-gradient-to-b from-background to-secondary/20">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
               Ваш проводник в мир Японии
@@ -101,8 +107,14 @@ const Index = () => {
       </section>
 
       {/* Quick Links Section */}
-      <section className="py-16 bg-secondary/20">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-500 rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Исследуйте контент</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -157,8 +169,14 @@ const Index = () => {
       </section>
 
       {/* Japanese Culture Insights */}
-      <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
               Погружение в японскую культуру
@@ -507,8 +525,14 @@ const Index = () => {
       </section>
 
       {/* Interesting Facts */}
-      <section className="py-20 wave-pattern">
-        <div className="container mx-auto px-4">
+      <section className="py-20 wave-pattern bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
+        {/* Decorative Background Elements */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-500 rounded-full blur-3xl" />
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
               Интересные факты о Японии

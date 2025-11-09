@@ -21,8 +21,14 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-24 bg-secondary/30 wave-pattern">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-gradient-to-b from-secondary/30 to-background wave-pattern relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Почему выбирают нас

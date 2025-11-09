@@ -4,8 +4,14 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AppPromo = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-accent/5 to-transparent wave-pattern">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-gradient-to-b from-secondary/20 via-accent/10 to-background wave-pattern relative overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 animate-fade-up">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
