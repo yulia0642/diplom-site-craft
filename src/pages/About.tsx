@@ -58,36 +58,52 @@ const About = () => {
                   icon: BookOpen,
                   title: "Глубокие статьи",
                   description: "Аналитические материалы о культуре, истории и современной жизни Японии",
-                  color: "primary",
+                  bgColor: "bg-blue-500/10",
+                  textColor: "text-blue-500",
+                  borderColor: "border-blue-500/20",
+                  hoverBg: "group-hover:bg-blue-500/20",
+                  hoverBorder: "hover:border-blue-500"
                 },
                 {
                   icon: Video,
                   title: "Видеоблоги",
                   description: "Авторские видео от экспатов и путешественников со всей Японии",
-                  color: "secondary",
+                  bgColor: "bg-purple-500/10",
+                  textColor: "text-purple-500",
+                  borderColor: "border-purple-500/20",
+                  hoverBg: "group-hover:bg-purple-500/20",
+                  hoverBorder: "hover:border-purple-500"
                 },
                 {
                   icon: Heart,
                   title: "Личные маршруты",
                   description: "Персонализированные гиды для вашего идеального путешествия",
-                  color: "accent",
+                  bgColor: "bg-orange-500/10",
+                  textColor: "text-orange-500",
+                  borderColor: "border-orange-500/20",
+                  hoverBg: "group-hover:bg-orange-500/20",
+                  hoverBorder: "hover:border-orange-500"
                 },
                 {
                   icon: Users,
                   title: "Сообщество",
                   description: "Активное комьюнити единомышленников и японофилов",
-                  color: "primary",
+                  bgColor: "bg-pink-500/10",
+                  textColor: "text-pink-500",
+                  borderColor: "border-pink-500/20",
+                  hoverBg: "group-hover:bg-pink-500/20",
+                  hoverBorder: "hover:border-pink-500"
                 },
               ].map((feature, index) => (
                 <div
                   key={feature.title}
-                  className="text-center animate-fade-in group"
+                  className={`text-center animate-fade-in group border-2 ${feature.borderColor} ${feature.hoverBorder} rounded-lg p-6 transition-all`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`w-16 h-16 mx-auto mb-4 bg-${feature.color}/10 rounded-full flex items-center justify-center group-hover:bg-${feature.color}/20 transition-colors shadow-lg shadow-${feature.color}/5`}>
-                    <feature.icon size={32} className={`text-${feature.color}`} />
+                  <div className={`w-16 h-16 mx-auto mb-4 ${feature.bgColor} ${feature.hoverBg} rounded-full flex items-center justify-center transition-colors shadow-lg`}>
+                    <feature.icon size={32} className={feature.textColor} />
                   </div>
-                  <h3 className="font-bold mb-2">{feature.title}</h3>
+                  <h3 className={`font-bold mb-2 ${feature.textColor}`}>{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">{feature.description}</p>
                 </div>
               ))}
@@ -115,25 +131,34 @@ const About = () => {
                 {
                   title: "Аутентичность",
                   description: "Только проверенная информация от людей, живущих в Японии или регулярно там бывающих",
-                  accent: "primary",
+                  borderColor: "border-blue-500/20",
+                  textColor: "text-blue-500",
+                  hoverBorder: "hover:border-blue-500",
+                  shadowColor: "hover:shadow-blue-500/10"
                 },
                 {
                   title: "Качество",
                   description: "Каждый материал проходит редактуру и проверку фактов перед публикацией",
-                  accent: "secondary",
+                  borderColor: "border-purple-500/20",
+                  textColor: "text-purple-500",
+                  hoverBorder: "hover:border-purple-500",
+                  shadowColor: "hover:shadow-purple-500/10"
                 },
                 {
                   title: "Доступность",
                   description: "Делаем японскую культуру понятной и близкой для русскоязычной аудитории",
-                  accent: "accent",
+                  borderColor: "border-orange-500/20",
+                  textColor: "text-orange-500",
+                  hoverBorder: "hover:border-orange-500",
+                  shadowColor: "hover:shadow-orange-500/10"
                 },
               ].map((value, index) => (
                 <div
                   key={value.title}
-                  className={`bg-card border-2 border-${value.accent}/20 rounded-lg p-6 hover:border-${value.accent} hover:shadow-lg hover:shadow-${value.accent}/10 transition-all japanese-border group`}
+                  className={`bg-card border-2 ${value.borderColor} ${value.hoverBorder} rounded-lg p-6 hover:shadow-lg ${value.shadowColor} transition-all japanese-border group`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <h3 className={`font-bold text-lg mb-3 text-${value.accent} group-hover:text-${value.accent}`}>{value.title}</h3>
+                  <h3 className={`font-bold text-lg mb-3 ${value.textColor}`}>{value.title}</h3>
                   <p className="text-sm text-muted-foreground">{value.description}</p>
                 </div>
               ))}
@@ -149,49 +174,63 @@ const About = () => {
                   name: "Анна Петрова",
                   location: "Москва",
                   text: "Благодаря Момидзи я впервые поехала в Японию подготовленной. Статьи о культуре храмов помогли избежать неловких ситуаций, а маршрут по Киото был просто идеальным!",
+                  accentColor: "blue"
                 },
                 {
                   name: "Дмитрий Соколов",
                   location: "Санкт-Петербург",
                   text: "Живу в Токио уже 3 года, но продолжаю читать Момидзи. Здесь всегда нахожу что-то новое — от скрытых онсенов до малоизвестных фестивалей. Настоящая находка для тех, кто хочет узнать Японию глубже.",
+                  accentColor: "purple"
                 },
                 {
                   name: "Елена Кравченко",
                   location: "Екатеринбург",
                   text: "Видеоблоги на платформе — это нечто! Смотрю их как сериал перед сном. Особенно понравился материал про сельскую Японию — показали то, что не увидишь в туристических брошюрах.",
+                  accentColor: "orange"
                 },
                 {
                   name: "Михаил Лебедев",
                   location: "Новосибирск",
                   text: "Планировал путешествие сам, но понял, что упускаю много важного. Момидзи помог составить персональный маршрут с учётом моих интересов к истории самураев. Поездка прошла безупречно!",
+                  accentColor: "pink"
                 },
                 {
                   name: "Ирина Волкова",
                   location: "Казань",
                   text: "Изучаю японский язык, и образовательный контент на Момидзи — отличное дополнение к учебникам. Фразы из реальной жизни, культурный контекст — всё это делает обучение живым и интересным.",
+                  accentColor: "blue"
                 },
-              ].map((testimonial, index) => (
-                <div
-                  key={testimonial.name}
-                  className="bg-card border-2 border-border rounded-lg p-6 hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all japanese-border animate-fade-in group"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mr-3 group-hover:from-primary/30 group-hover:to-secondary/30 transition-all">
-                      <span className="text-primary font-bold text-lg">
-                        {testimonial.name.charAt(0)}
-                      </span>
+              ].map((testimonial, index) => {
+                const colors = {
+                  blue: { border: "border-blue-500/20", hoverBorder: "hover:border-blue-500", gradient: "from-blue-500/20 to-blue-500/10", text: "text-blue-500" },
+                  purple: { border: "border-purple-500/20", hoverBorder: "hover:border-purple-500", gradient: "from-purple-500/20 to-purple-500/10", text: "text-purple-500" },
+                  orange: { border: "border-orange-500/20", hoverBorder: "hover:border-orange-500", gradient: "from-orange-500/20 to-orange-500/10", text: "text-orange-500" },
+                  pink: { border: "border-pink-500/20", hoverBorder: "hover:border-pink-500", gradient: "from-pink-500/20 to-pink-500/10", text: "text-pink-500" }
+                };
+                const color = colors[testimonial.accentColor as keyof typeof colors];
+                return (
+                  <div
+                    key={testimonial.name}
+                    className={`bg-card border-2 ${color.border} rounded-lg p-6 ${color.hoverBorder} hover:shadow-lg transition-all japanese-border animate-fade-in group`}
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="flex items-center mb-4">
+                      <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${color.gradient} flex items-center justify-center mr-3 transition-all`}>
+                        <span className={`${color.text} font-bold text-lg`}>
+                          {testimonial.name.charAt(0)}
+                        </span>
+                      </div>
+                      <div>
+                        <h3 className="font-bold">{testimonial.name}</h3>
+                        <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="font-bold">{testimonial.name}</h3>
-                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      "{testimonial.text}"
+                    </p>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    "{testimonial.text}"
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
@@ -217,37 +256,37 @@ const About = () => {
             <h2 className="text-2xl font-bold text-center mb-8">Начните изучение</h2>
             <div className="grid md:grid-cols-4 gap-4">
               <Link to="/articles" className="group">
-                <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all text-center">
-                  <BookOpen className="w-10 h-10 text-primary mx-auto mb-3" />
-                  <h3 className="font-bold mb-1 group-hover:text-primary transition-colors">Статьи</h3>
-                  <span className="text-xs text-primary font-medium inline-flex items-center gap-1">
+                <div className="p-6 bg-card rounded-lg border-2 border-blue-500/20 hover:border-blue-500 transition-all text-center">
+                  <BookOpen className="w-10 h-10 text-blue-500 mx-auto mb-3" />
+                  <h3 className="font-bold mb-1 text-blue-500 transition-colors">Статьи</h3>
+                  <span className="text-xs text-blue-500 font-medium inline-flex items-center gap-1">
                     Читать <ArrowRight className="w-3 h-3" />
                   </span>
                 </div>
               </Link>
               <Link to="/videos" className="group">
-                <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all text-center">
-                  <Video className="w-10 h-10 text-primary mx-auto mb-3" />
-                  <h3 className="font-bold mb-1 group-hover:text-primary transition-colors">Видео</h3>
-                  <span className="text-xs text-primary font-medium inline-flex items-center gap-1">
+                <div className="p-6 bg-card rounded-lg border-2 border-purple-500/20 hover:border-purple-500 transition-all text-center">
+                  <Video className="w-10 h-10 text-purple-500 mx-auto mb-3" />
+                  <h3 className="font-bold mb-1 text-purple-500 transition-colors">Видео</h3>
+                  <span className="text-xs text-purple-500 font-medium inline-flex items-center gap-1">
                     Смотреть <ArrowRight className="w-3 h-3" />
                   </span>
                 </div>
               </Link>
               <Link to="/books" className="group">
-                <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all text-center">
-                  <Heart className="w-10 h-10 text-primary mx-auto mb-3" />
-                  <h3 className="font-bold mb-1 group-hover:text-primary transition-colors">Книги</h3>
-                  <span className="text-xs text-primary font-medium inline-flex items-center gap-1">
+                <div className="p-6 bg-card rounded-lg border-2 border-orange-500/20 hover:border-orange-500 transition-all text-center">
+                  <Heart className="w-10 h-10 text-orange-500 mx-auto mb-3" />
+                  <h3 className="font-bold mb-1 text-orange-500 transition-colors">Книги</h3>
+                  <span className="text-xs text-orange-500 font-medium inline-flex items-center gap-1">
                     Купить <ArrowRight className="w-3 h-3" />
                   </span>
                 </div>
               </Link>
               <Link to="/travel" className="group">
-                <div className="p-6 bg-card rounded-lg border-2 border-border hover:border-primary transition-all text-center">
-                  <Users className="w-10 h-10 text-primary mx-auto mb-3" />
-                  <h3 className="font-bold mb-1 group-hover:text-primary transition-colors">Маршруты</h3>
-                  <span className="text-xs text-primary font-medium inline-flex items-center gap-1">
+                <div className="p-6 bg-card rounded-lg border-2 border-pink-500/20 hover:border-pink-500 transition-all text-center">
+                  <Users className="w-10 h-10 text-pink-500 mx-auto mb-3" />
+                  <h3 className="font-bold mb-1 text-pink-500 transition-colors">Маршруты</h3>
+                  <span className="text-xs text-pink-500 font-medium inline-flex items-center gap-1">
                     Создать <ArrowRight className="w-3 h-3" />
                   </span>
                 </div>
