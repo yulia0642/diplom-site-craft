@@ -234,8 +234,9 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-b from-secondary/20 to-background relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 right-10 w-64 h-64 bg-primary rounded-full blur-3xl" />
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
+          <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-500 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-purple-500 rounded-full blur-3xl" />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -298,8 +299,9 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-b from-secondary/20 to-background relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
+          <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-pink-500 rounded-full blur-3xl" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -433,8 +435,9 @@ const Index = () => {
       <section className="py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-primary rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500 rounded-full blur-3xl" />
+          <div className="absolute top-1/2 right-1/3 w-56 h-56 bg-purple-500 rounded-full blur-3xl" />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
