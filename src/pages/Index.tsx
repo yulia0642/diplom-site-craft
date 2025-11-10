@@ -46,14 +46,14 @@ const Index = () => {
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background wave-pattern">
+    <div className="relative min-h-screen overflow-hidden bg-transparent">
       {/* Global subtle background overlay using design tokens */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-60">
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 opacity-30">
         <div
           className="absolute inset-0"
           style={{
             background:
-              'radial-gradient(800px 500px at 10% 10%, hsl(var(--primary) / 0.08), transparent), radial-gradient(900px 600px at 90% 20%, hsl(var(--accent) / 0.10), transparent), radial-gradient(700px 500px at 50% 85%, hsl(var(--primary) / 0.06), transparent)'
+              'radial-gradient(800px 500px at 10% 10%, hsl(var(--primary) / 0.15), transparent), radial-gradient(900px 600px at 90% 20%, hsl(var(--accent) / 0.18), transparent), radial-gradient(700px 500px at 50% 85%, hsl(var(--primary) / 0.12), transparent), radial-gradient(600px 400px at 30% 50%, hsl(218 100% 60% / 0.15), transparent)'
           }}
         />
       </div>
@@ -62,7 +62,7 @@ const Index = () => {
       <Features />
       
       {/* Platform Benefits Section */}
-      <section className="py-20 wave-pattern relative overflow-hidden bg-gradient-to-b from-background to-secondary/20">
+      <section className="py-20 relative overflow-hidden bg-transparent">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
@@ -117,7 +117,7 @@ const Index = () => {
       </section>
 
       {/* Quick Links Section */}
-      <section className="py-16 bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden wave-pattern">
+      <section className="py-16 bg-transparent relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
@@ -179,7 +179,7 @@ const Index = () => {
       </section>
 
       {/* Japanese Culture Insights */}
-      <section className="py-20 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden wave-pattern">
+      <section className="py-20 bg-transparent relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
@@ -241,7 +241,7 @@ const Index = () => {
       </section>
 
       {/* Japanese Language & Traditions */}
-      <section className="py-20 bg-gradient-to-b from-secondary/20 to-background relative overflow-hidden wave-pattern">
+      <section className="py-20 bg-transparent relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
@@ -306,7 +306,7 @@ const Index = () => {
       </section>
 
       {/* Japan Geography Infographic */}
-      <section className="py-20 bg-gradient-to-b from-secondary/20 to-background relative overflow-hidden wave-pattern">
+      <section className="py-20 bg-transparent relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
@@ -442,7 +442,7 @@ const Index = () => {
       </section>
 
       {/* Cultural Elements Timeline */}
-      <section className="py-20 bg-gradient-to-b from-background to-secondary/20 relative overflow-hidden wave-pattern">
+      <section className="py-20 bg-transparent relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
@@ -538,7 +538,7 @@ const Index = () => {
       </section>
 
       {/* Interesting Facts */}
-      <section className="py-20 wave-pattern bg-gradient-to-b from-secondary/30 to-background relative overflow-hidden">
+      <section className="py-20 bg-transparent relative overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
