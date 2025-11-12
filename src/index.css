@@ -240,4 +240,27 @@ All colors MUST be HSL.
     color: hsl(var(--primary) / 0.15);
     font-size: 1.5rem;
   }
+
+  /* Ambient background for sections */
+  .ambient-section {
+    position: relative;
+  }
+  .ambient-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.28;
+    background:
+      radial-gradient(700px 480px at 12% 18%, hsl(var(--primary) / 0.14), transparent),
+      radial-gradient(820px 520px at 88% 24%, hsl(var(--accent) / 0.14), transparent);
+  }
+
+  .dark .ambient-section::before {
+    opacity: 0.22;
+    background:
+      radial-gradient(700px 480px at 12% 18%, hsl(var(--primary) / 0.20), transparent),
+      radial-gradient(820px 520px at 88% 24%, hsl(var(--accent) / 0.18), transparent);
+  }
 }

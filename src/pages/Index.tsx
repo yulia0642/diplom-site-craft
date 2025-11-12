@@ -62,13 +62,7 @@ const Index = () => {
       <Features />
       
       {/* Platform Benefits Section */}
-      <section className="py-20 relative overflow-hidden bg-transparent">
-        {/* Decorative Background Elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
-        </div>
-        
+      <section className="py-20 relative overflow-hidden bg-transparent ambient-section">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
@@ -117,7 +111,7 @@ const Index = () => {
       </section>
 
       {/* Quick Links Section */}
-      <section className="py-16 bg-transparent relative overflow-hidden">
+      <section className="py-16 bg-transparent relative overflow-hidden ambient-section">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
@@ -179,7 +173,7 @@ const Index = () => {
       </section>
 
       {/* Japanese Culture Insights */}
-      <section className="py-20 bg-transparent relative overflow-hidden">
+      <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
@@ -241,7 +235,7 @@ const Index = () => {
       </section>
 
       {/* Japanese Language & Traditions */}
-      <section className="py-20 bg-transparent relative overflow-hidden">
+      <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
@@ -306,7 +300,7 @@ const Index = () => {
       </section>
 
       {/* Japan Geography Infographic */}
-      <section className="py-20 bg-transparent relative overflow-hidden">
+      <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
@@ -442,7 +436,7 @@ const Index = () => {
       </section>
 
       {/* Cultural Elements Timeline */}
-      <section className="py-20 bg-transparent relative overflow-hidden">
+      <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
@@ -538,7 +532,7 @@ const Index = () => {
       </section>
 
       {/* Interesting Facts */}
-      <section className="py-20 bg-transparent relative overflow-hidden">
+      <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
