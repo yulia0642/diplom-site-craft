@@ -5,6 +5,8 @@ import Culture from "@/components/Culture";
 import AppPromo from "@/components/AppPromo";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import JapanMap from "@/components/JapanMap";
+import PopularDestinations from "@/components/PopularDestinations";
 import { Card, CardContent } from "@/components/ui/card";
 import { Book, Video, FileText, Users, Globe, Heart, ArrowRight, Sparkles, Mountain, Coffee, BookOpen, Map, Calendar, Languages, Utensils, Train, Building2, Cherry } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -59,6 +61,23 @@ const Index = () => {
       </div>
       <Header />
       <Hero />
+      <PopularDestinations />
+      
+      {/* Interactive Map Section */}
+      <section className="py-16 ambient-section">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Интерактивная карта Японии
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Изучите ключевые направления и начните планировать своё путешествие
+            </p>
+          </div>
+          <JapanMap />
+        </div>
+      </section>
+      
       <Features />
       
       {/* Platform Benefits Section */}

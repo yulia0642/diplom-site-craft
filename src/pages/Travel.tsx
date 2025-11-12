@@ -2,8 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Routes from "@/components/Routes";
 import TourOperators from "@/components/TourOperators";
+import JapanMap from "@/components/JapanMap";
+import PopularDestinations from "@/components/PopularDestinations";
 import { Link } from "react-router-dom";
-import { FileText, Video, Book, ArrowRight } from "lucide-react";
+import { FileText, Video, Book, ArrowRight, MapPin } from "lucide-react";
 
 const Travel = () => {
   return (
@@ -11,14 +13,35 @@ const Travel = () => {
       <Header />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
+        <section className="relative py-20 overflow-hidden ambient-section">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-foreground drop-shadow-lg">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <MapPin className="w-5 h-5 text-primary" />
+              <span className="text-sm font-medium text-primary">Интерактивный путеводитель</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-foreground">
               Путешествия по Японии
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Откройте для себя готовые маршруты или создайте свой идеальный тур с учётом ваших интересов и бюджета
             </p>
+          </div>
+        </section>
+
+        <PopularDestinations />
+
+        {/* Interactive Map Section */}
+        <section className="py-16 ambient-section">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                Интерактивная карта Японии
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Изучите ключевые направления и начните планировать своё путешествие
+              </p>
+            </div>
+            <JapanMap />
           </div>
         </section>
 
