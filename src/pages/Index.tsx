@@ -112,12 +112,6 @@ const Index = () => {
 
       {/* Quick Links Section */}
       <section className="py-16 bg-transparent relative overflow-hidden ambient-section">
-        {/* Decorative Background Elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-500 rounded-full blur-3xl" />
-        </div>
-        
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Исследуйте контент</h2>
@@ -174,12 +168,6 @@ const Index = () => {
 
       {/* Japanese Culture Insights */}
       <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
-        {/* Decorative Background Elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
-        </div>
-        
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
@@ -236,13 +224,6 @@ const Index = () => {
 
       {/* Japanese Language & Traditions */}
       <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
-        {/* Decorative Background Elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-500 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-purple-500 rounded-full blur-3xl" />
-        </div>
-        
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="japanese-border hover-lift animate-fade-up">
@@ -301,13 +282,6 @@ const Index = () => {
 
       {/* Japan Geography Infographic */}
       <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
-        {/* Decorative Background Elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
-          <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-pink-500 rounded-full blur-3xl" />
-        </div>
-
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-up">
             <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full">
@@ -437,13 +411,6 @@ const Index = () => {
 
       {/* Cultural Elements Timeline */}
       <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
-        {/* Decorative Background Elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 right-1/3 w-56 h-56 bg-purple-500 rounded-full blur-3xl" />
-        </div>
-        
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
@@ -533,12 +500,6 @@ const Index = () => {
 
       {/* Interesting Facts */}
       <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
-        {/* Decorative Background Elements */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-500 rounded-full blur-3xl" />
-        </div>
-        
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-up">
             <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
