@@ -4,7 +4,7 @@ import { Building2, Map, CheckCircle2, Users } from "lucide-react";
 
 const TourOperators = () => {
   return (
-    <section className="py-24 bg-secondary/20 wave-pattern">
+    <section className="py-24 bg-transparent ambient-section">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -89,7 +89,7 @@ const TourOperators = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Card className="max-w-4xl mx-auto border-border/50 bg-gradient-to-br from-background to-secondary/10">
+          <Card className="max-w-4xl mx-auto border-border/50 bg-transparent">
             <CardContent className="py-8">
               <Users className="w-12 h-12 text-primary mx-auto mb-4" />
               <h3 className="text-2xl font-semibold mb-3">Наши партнёры</h3>

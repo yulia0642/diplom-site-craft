@@ -4,13 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const AppPromo = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-secondary/20 via-accent/10 to-background wave-pattern relative overflow-hidden">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500 rounded-full blur-3xl" />
-      </div>
-      
+    <section className="py-24 bg-transparent ambient-section relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 animate-fade-up">
@@ -18,7 +12,7 @@ const AppPromo = () => {
               <Bell className="w-4 h-4" />
               <span className="text-sm font-medium">Скоро запуск</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Мобильное приложение Момидзи
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

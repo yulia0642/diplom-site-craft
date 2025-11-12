@@ -67,7 +67,7 @@ const Books = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 pt-24 pb-16 wave-pattern">
+      <main className="flex-1 pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16 animate-fade-in japanese-border">
@@ -112,7 +112,7 @@ const Books = () => {
                   className={`bg-card rounded-lg overflow-hidden border-2 border-${category.color}/20 hover:border-${category.color}/50 transition-all duration-300 hover:shadow-lg animate-fade-in japanese-border relative`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-${category.color} to-${category.color}/50`} />
+                  <div className={`absolute top-0 left-0 right-0 h-1 bg-primary`} />
                   <div className="p-6 space-y-4">
                     <div>
                       <div className={`inline-block px-3 py-1 rounded-full bg-${category.color}/10 text-${category.color} text-xs font-semibold mb-3`}>
@@ -164,7 +164,7 @@ const Books = () => {
 
           {/* Related Content Section */}
           <div className="mt-12 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
+            <div className="bg-transparent rounded-lg p-8">
               <h2 className="text-2xl font-bold text-center mb-6">Вдохновение для путешествия</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <Link to="/articles" className="group">

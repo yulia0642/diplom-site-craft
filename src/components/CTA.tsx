@@ -4,15 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-24 relative overflow-hidden wave-pattern bg-gradient-to-b from-background to-secondary/20">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-background"></div>
-      
-      {/* Enhanced Decorative elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500 rounded-full blur-3xl" />
-      </div>
-      
+    <section className="py-24 relative overflow-hidden bg-transparent ambient-section">
       <div className="container mx-auto px-4 relative z-10 japanese-border">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">

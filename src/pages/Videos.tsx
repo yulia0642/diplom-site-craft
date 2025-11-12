@@ -79,7 +79,7 @@ const Videos = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 pt-24 pb-16 wave-pattern">
+      <main className="flex-1 pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="text-center mb-16 animate-fade-in japanese-border">
@@ -184,7 +184,7 @@ const Videos = () => {
 
           {/* CTA Section */}
           <div className="mt-16 max-w-3xl mx-auto text-center animate-fade-in">
-            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
+            <div className="bg-transparent rounded-lg p-8">
               <h2 className="text-2xl font-bold mb-4">Станьте частью сообщества</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Подписывайтесь на канал Момидзи, чтобы не пропустить новые видео,<br className="hidden md:block" />

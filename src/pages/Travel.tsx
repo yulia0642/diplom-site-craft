@@ -11,7 +11,7 @@ const Travel = () => {
       <Header />
       <main className="pt-16">
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden wave-pattern">
+        <section className="relative py-20 overflow-hidden">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-foreground drop-shadow-lg">
               Путешествия по Японии
@@ -26,10 +26,10 @@ const Travel = () => {
         <TourOperators />
 
         {/* Inspiration Section */}
-        <section className="py-16 bg-secondary/20">
+        <section className="py-16 bg-transparent">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
+              <div className="bg-transparent rounded-lg p-8">
                 <h2 className="text-2xl font-bold text-center mb-6">Вдохновитесь перед поездкой</h2>
                 <div className="grid md:grid-cols-3 gap-4">
                   <Link to="/articles" className="group">

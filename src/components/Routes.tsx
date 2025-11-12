@@ -103,10 +103,10 @@ const Routes = () => {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-secondary/10 wave-pattern">
+    <section className="py-24 bg-transparent ambient-section">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
             Маршруты на любой вкус и бюджет
           </h2>
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -230,7 +230,7 @@ const Routes = () => {
         </div>
 
         <div className="mt-16 text-center space-y-6">
-          <Card className="max-w-4xl mx-auto border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
+          <Card className="max-w-4xl mx-auto border-primary/20 bg-transparent">
             <CardContent className="py-8">
               <h3 className="text-2xl font-semibold mb-4">Не нашли подходящий маршрут?</h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto leading-relaxed">

@@ -66,7 +66,7 @@ const CreateRoute = () => {
         <div className="container mx-auto px-4 py-12">
           {/* Hero Section */}
           <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-up japanese-border p-8 bg-card/50 backdrop-blur-sm rounded-lg">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
               Создайте свой идеальный маршрут
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">

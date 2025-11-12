@@ -344,7 +344,7 @@ const Index = () => {
                 return (
                   <Card 
                     key={index}
-                    className={`relative overflow-hidden hover-lift animate-fade-up border-2 hover:border-primary/50 transition-all duration-300 bg-gradient-to-br ${item.gradient}`}
+                    className={`relative overflow-hidden hover-lift animate-fade-up border-2 hover:border-primary/50 transition-all duration-300 bg-card`}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <CardContent className="p-6">
@@ -387,7 +387,7 @@ const Index = () => {
             </div>
 
             {/* Additional Info Banner */}
-            <Card className="japanese-border bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 animate-fade-up">
+            <Card className="japanese-border bg-card animate-fade-up">
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-3 gap-8 text-center">
                   <div>

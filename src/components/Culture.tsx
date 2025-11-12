@@ -27,13 +27,7 @@ const cultureItems = [
 
 const Culture = () => {
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-10 w-64 h-64 bg-orange-500 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-pink-500 rounded-full blur-3xl" />
-      </div>
-      
+    <section className="py-24 bg-transparent ambient-section relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-slide-in">

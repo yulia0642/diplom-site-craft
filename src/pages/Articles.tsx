@@ -47,7 +47,7 @@ const Articles = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 pt-24 pb-16 wave-pattern">
+      <main className="flex-1 pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="text-center mb-16 animate-fade-in japanese-border">
@@ -99,7 +99,7 @@ const Articles = () => {
 
           {/* Related Content Section */}
           <div className="mt-20 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
+            <div className="bg-transparent rounded-lg p-8">
               <h2 className="text-2xl font-bold text-center mb-6">Продолжите изучение</h2>
               <div className="grid md:grid-cols-2 gap-4">
                 <Link to="/videos" className="group">

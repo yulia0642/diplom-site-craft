@@ -9,7 +9,7 @@ const About = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 pt-24 pb-16 wave-pattern">
+      <main className="flex-1 pt-24 pb-16">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
           <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in japanese-border">
@@ -112,7 +112,7 @@ const About = () => {
           {/* Technology Section */}
           <div className="max-w-4xl mx-auto mb-16 animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-8 text-center text-foreground">Технологии и подход</h2>
-            <div className="bg-gradient-to-br from-card to-card border border-primary/20 rounded-lg p-8 mb-8 japanese-border shadow-lg shadow-primary/5">
+            <div className="bg-transparent border border-primary/20 rounded-lg p-8 mb-8 japanese-border shadow-lg shadow-primary/5">
               <h3 className="font-bold text-xl mb-4 text-center text-primary">Умные рекомендации</h3>
               <p className="text-muted-foreground leading-relaxed text-center">
                 ИИ-персонализация контента с сохранением человеческого опыта и экспертизы. 
@@ -215,7 +215,7 @@ const About = () => {
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="flex items-center mb-4">
-                      <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${color.gradient} flex items-center justify-center mr-3 transition-all`}>
+                      <div className={`w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-3 transition-all`}>
                         <span className={`${color.text} font-bold text-lg`}>
                           {testimonial.name.charAt(0)}
                         </span>
@@ -236,7 +236,7 @@ const About = () => {
 
           {/* Team Section */}
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8">
+            <div className="bg-transparent rounded-lg p-8">
               <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-foreground">Присоединяйтесь к нам</h2>
               <p className="text-muted-foreground mb-6">
                 Момидзи постоянно растёт. Если вы эксперт по Японии, создаёте контент 
