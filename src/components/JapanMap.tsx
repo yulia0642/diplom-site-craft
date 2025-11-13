@@ -1,10 +1,11 @@
+import { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import L from 'leaflet';
+import { icon as leafletIcon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-// Fix default marker icon
-const icon = L.icon({
+// Fix default marker icon (works with Vite/ESM)
+const defaultIcon = leafletIcon({
   iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
   shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
@@ -16,6 +17,8 @@ const icon = L.icon({
 
 const JapanMap = () => {
   const { language } = useLanguage();
+  const [isClient, setIsClient] = useState(false);
+  useEffect(() => setIsClient(true), []);
   
   const locations = [
     {
@@ -69,6 +72,10 @@ const JapanMap = () => {
     }
   ];
 
+  if (!isClient) {
+    return <div className="w-full h-[600px] rounded-lg border border-border" />;
+  }
+
   return (
     <div className="w-full h-[600px] rounded-lg overflow-hidden shadow-lg border border-border">
       <MapContainer
@@ -81,7 +88,7 @@ const JapanMap = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {locations.map((location, index) => (
-          <Marker key={index} position={location.position} icon={icon}>
+          <Marker key={index} position={location.position} icon={defaultIcon}>
             <Popup>
               <div className="text-center">
                 <h3 className="font-semibold text-lg mb-1">{location.name}</h3>
