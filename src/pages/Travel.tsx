@@ -2,7 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Routes from "@/components/Routes";
 import TourOperators from "@/components/TourOperators";
-import JapanMap from "@/components/JapanMap";
+import { lazy, Suspense } from "react";
+const JapanMapLazy = lazy(() => import("@/components/JapanMap"));
 import PopularDestinations from "@/components/PopularDestinations";
 import { Link } from "react-router-dom";
 import { FileText, Video, Book, ArrowRight, MapPin } from "lucide-react";
@@ -41,7 +42,9 @@ const Travel = () => {
                 Изучите ключевые направления и начните планировать своё путешествие
               </p>
             </div>
-            <JapanMap />
+            <Suspense fallback={<div className="w-full h-[600px] rounded-lg border border-border" />}> 
+              <JapanMapLazy />
+            </Suspense>
           </div>
         </section>
 
