@@ -131,7 +131,7 @@ const Index = () => {
                   Три системы письменности — хирагана, катакана и кандзи — отражают сложность и красоту японского языка. 
                   Изучение языка открывает двери к пониманию культуры.
                 </p>
-                <div className="text-3xl font-serif text-primary mb-2">
+                <div className="text-3xl font-sans text-primary mb-2">
                   日本語
                 </div>
                 <p className="text-sm text-muted-foreground">Нихонго (японский язык)</p>
@@ -148,7 +148,7 @@ const Index = () => {
                   В Японии особое отношение к смене времён года. Цветение сакуры весной, 
                   осенние клёны момидзи, зимние снежные пейзажи — каждый сезон воспевается в искусстве.
                 </p>
-                <div className="text-3xl font-serif text-primary mb-2">
+                <div className="text-3xl font-sans text-primary mb-2">
                   四季
                 </div>
                 <p className="text-sm text-muted-foreground">Сики (четыре сезона)</p>
@@ -165,7 +165,7 @@ const Index = () => {
                   Эстетическая концепция, находящая красоту в несовершенстве, простоте и быстротечности. 
                   Ваби-саби учит ценить естественность и принимать непостоянство жизни.
                 </p>
-                <div className="text-3xl font-serif text-primary mb-2">
+                <div className="text-3xl font-sans text-primary mb-2">
                   侘寂
                 </div>
                 <p className="text-sm text-muted-foreground">Ваби-саби</p>
@@ -376,7 +376,7 @@ const Index = () => {
                   <CardContent className="p-6">
                     <Icon className="w-10 h-10 text-primary mb-3" />
                     <h3 className="text-xl font-bold mb-1">{item.title}</h3>
-                    <p className="text-sm text-primary mb-4 font-serif">{item.subtitle}</p>
+                    <p className="text-sm text-primary mb-4 font-sans">{item.subtitle}</p>
                     <ul className="space-y-2">
                       {item.items.map((listItem, i) => (
                         <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
