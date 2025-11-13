@@ -15,16 +15,21 @@ import About from "./pages/About";
 import CreateRoute from "./pages/CreateRoute";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
-import { applyPrepositionsWrap } from "@/lib/typography";
+import { initTypographyObserver } from "@/lib/typography";
 
 const queryClient = new QueryClient();
 
 const TypographyManager = () => {
   const location = useLocation();
+  
   useEffect(() => {
     const root = document.getElementById("root");
-    if (root) applyPrepositionsWrap(root);
+    if (root) {
+      const observer = initTypographyObserver(root);
+      return () => observer?.disconnect();
+    }
   }, [location.pathname]);
+  
   return null;
 };
 

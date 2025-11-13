@@ -1,15 +1,24 @@
+// Типографика: предотвращение висячих предлогов
 export function applyPrepositionsWrap(root: HTMLElement) {
   if (!root) return;
+  
   try {
+    // Полный список русских предлогов и коротких союзов
     const PREPOSITIONS = [
-      // one-letter
-      "в","к","с","у","о",
-      // common multi-letter
-      "во","ко","со","об","обо","на","по","из","от","до","для","при","над","под","перед","через","про","между","после","около","среди"
+      // Однобуквенные
+      "в", "к", "о", "с", "у",
+      // Двухбуквенные
+      "во", "за", "из", "ко", "на", "не", "ни", "об", "от", "по", "со", "то",
+      // Трёхбуквенные
+      "без", "для", "или", "изо", "над", "обо", "про", "под",
+      // Четырёхбуквенные и длиннее
+      "близ", "возле", "вокруг", "вроде", "кроме", "между", "перед", "после", 
+      "сквозь", "среди", "через", "около", "вопреки", "благодаря", "согласно",
+      "а", "и", "но", "да", "же", "ли", "бы", "ж"
     ];
-    // Match preposition at word boundary followed by spaces before next non-space character
-    const regex = new RegExp(`(^|[^\\/\wА-Яа-яЁё])((?:${PREPOSITIONS.join("|")})\u0020+)(?=[^\u0020])`,`giu`);
 
+    const nbsp = "\u00A0";
+    
     const walker = document.createTreeWalker(
       root,
       NodeFilter.SHOW_TEXT,
@@ -17,18 +26,22 @@ export function applyPrepositionsWrap(root: HTMLElement) {
         acceptNode(node) {
           const parent = node.parentElement;
           if (!parent) return NodeFilter.FILTER_REJECT;
+          
           const tag = parent.tagName;
-          if (["SCRIPT","STYLE","NOSCRIPT","CODE","PRE"].includes(tag)) {
+          // Пропускаем служебные теги
+          if (["SCRIPT", "STYLE", "NOSCRIPT", "CODE", "PRE", "TEXTAREA"].includes(tag)) {
             return NodeFilter.FILTER_REJECT;
           }
-          // Skip if no Russian letters to avoid unnecessary work
-          if (!/[А-Яа-яЁё]/.test(node.nodeValue || "")) return NodeFilter.FILTER_REJECT;
+          
+          // Проверяем наличие кириллицы
+          if (!/[А-Яа-яЁё]/.test(node.nodeValue || "")) {
+            return NodeFilter.FILTER_REJECT;
+          }
+          
           return NodeFilter.FILTER_ACCEPT;
         }
       } as unknown as NodeFilter
     );
-
-    const nbsp = "\u00A0";
 
     const nodes: Text[] = [];
     let n: Node | null = walker.nextNode();
@@ -38,13 +51,59 @@ export function applyPrepositionsWrap(root: HTMLElement) {
     }
 
     nodes.forEach(node => {
-      const value = node.nodeValue || "";
-      // Replace spaces after prepositions with NBSP to move pair to next line when needed
-      const replaced = value.replace(/\b(в|во|на|по|из|от|до|для|при|над|под|перед|через|о|об|обо|с|со|к|ко|у)\s+/giu, (m) => m.replace(/\s+$/u, nbsp));
-      if (replaced !== value) node.nodeValue = replaced;
+      if (!node.nodeValue) return;
+      
+      let value = node.nodeValue;
+      
+      // Заменяем обычные пробелы после предлогов на неразрывные
+      PREPOSITIONS.forEach(prep => {
+        // Ищем предлог как отдельное слово (с границами слова) + пробел
+        const regex = new RegExp(`(^|\\s)(${prep})\\s+`, 'giu');
+        value = value.replace(regex, `$1${prep}${nbsp}`);
+      });
+      
+      if (value !== node.nodeValue) {
+        node.nodeValue = value;
+      }
     });
   } catch (e) {
-    // Fail silently - typography is non-critical
-    console.warn("Typography processing failed", e);
+    console.warn("Typography processing failed:", e);
   }
+}
+
+// Наблюдатель за изменениями DOM для повторной обработки типографики
+export function initTypographyObserver(root: HTMLElement) {
+  if (!root) return;
+  
+  // Первичная обработка
+  applyPrepositionsWrap(root);
+  
+  // Настраиваем наблюдатель за изменениями
+  const observer = new MutationObserver((mutations) => {
+    let needsUpdate = false;
+    
+    for (const mutation of mutations) {
+      if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+        needsUpdate = true;
+        break;
+      }
+      if (mutation.type === 'characterData') {
+        needsUpdate = true;
+        break;
+      }
+    }
+    
+    if (needsUpdate) {
+      // Задержка для группировки множественных изменений
+      setTimeout(() => applyPrepositionsWrap(root), 50);
+    }
+  });
+  
+  observer.observe(root, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+  
+  return observer;
 }
