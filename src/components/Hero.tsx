@@ -22,12 +22,12 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="text-primary">Момидзи</span>
             <span className="block text-3xl md:text-4xl mt-2 text-foreground font-normal">
-              Ваш путеводитель по Японии
+              Ваш путеводитель по{"\u00A0"}Японии
             </span>
           </h1>
           
           <p className="text-lg md:text-xl text-foreground/90 max-w-3xl mx-auto leading-relaxed">
-            Персонализированные маршруты, культурные гиды и образовательный контент для незабываемого путешествия в Страну восходящего солнца. Откройте для себя истинную Японию через наши статьи, видео и книги.
+            Персонализированные маршруты, культурные гиды и{"\u00A0"}образовательный контент для незабываемого путешествия в{"\u00A0"}Страну восходящего солнца. Откройте для себя истинную Японию через наши статьи, видео и{"\u00A0"}книги.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
@@ -41,7 +41,7 @@ const Hero = () => {
             <Link to="/articles">
               <Button size="lg" variant="outline" className="text-lg px-8 py-6">
                 <Book className="mr-2 w-5 h-5" />
-                Статьи и гайды
+                Статьи и{"\u00A0"}гайды
               </Button>
             </Link>
             <Link to="/videos">

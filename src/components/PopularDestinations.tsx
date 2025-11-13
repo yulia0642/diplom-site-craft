@@ -27,7 +27,7 @@ const PopularDestinations = () => {
       image: fushimiInari,
       description: language === 'en'
         ? 'Walk through thousands of vermillion torii gates at Fushimi Inari shrine'
-        : 'Пройдите через тысячи красных ворот тории в святилище Фусими Инари',
+        : 'Пройдите через тысячи красных ворот тории в\u00A0святилище Фусими Инари',
       highlights: language === 'en'
         ? ['Fushimi Inari', 'Kinkaku-ji', 'Arashiyama Bamboo']
         : ['Фусими Инари', 'Кинкаку-дзи', 'Бамбуковый лес Арасияма']
@@ -37,7 +37,7 @@ const PopularDestinations = () => {
       image: mountFuji,
       description: language === 'en'
         ? "Japan's iconic volcano surrounded by stunning natural landscapes"
-        : 'Культовый вулкан Японии в окружении потрясающих природных ландшафтов',
+        : 'Культовый вулкан Японии в\u00A0окружении потрясающих природных ландшафтов',
       highlights: language === 'en'
         ? ['Cherry Blossoms', 'Five Lakes', 'Hiking Trails']
         : ['Цветение сакуры', 'Пять озер', 'Пешеходные тропы']
@@ -47,7 +47,7 @@ const PopularDestinations = () => {
       image: ryokan,
       description: language === 'en'
         ? 'Stay in a traditional Japanese inn with tatami rooms and zen gardens'
-        : 'Остановитесь в традиционной японской гостинице с комнатами татами и дзен-садами',
+        : 'Остановитесь в\u00A0традиционной японской гостинице с\u00A0комнатами татами и\u00A0дзен-садами',
       highlights: language === 'en'
         ? ['Tatami Rooms', 'Kaiseki Cuisine', 'Hot Springs']
         : ['Комнаты татами', 'Кухня кайсэки', 'Горячие источники']
@@ -57,7 +57,7 @@ const PopularDestinations = () => {
       image: osakaFood,
       description: language === 'en'
         ? 'Discover street food paradise with takoyaki, okonomiyaki, and more'
-        : 'Откройте для себя рай уличной еды с такояки, окономияки и многим другим',
+        : 'Откройте для себя рай уличной еды с\u00A0такояки, окономияки и\u00A0многим другим',
       highlights: language === 'en'
         ? ['Takoyaki', 'Okonomiyaki', 'Night Markets']
         : ['Такояки', 'Окономияки', 'Ночные рынки']
@@ -67,7 +67,7 @@ const PopularDestinations = () => {
       image: hiroshima,
       description: language === 'en'
         ? 'Visit the Peace Memorial Park and learn about resilience and hope'
-        : 'Посетите Парк мира и узнайте о стойкости и надежде',
+        : 'Посетите Парк мира и\u00A0узнайте о\u00A0стойкости и\u00A0надежде',
       highlights: language === 'en'
         ? ['Peace Memorial', 'Itsukushima Shrine', 'Atomic Bomb Dome']
         : ['Мемориал мира', 'Святилище Ицукусима', 'Купол атомной бомбы']
