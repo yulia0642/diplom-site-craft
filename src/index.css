@@ -125,6 +125,17 @@ All colors MUST be HSL.
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Noto Sans JP', 'Inter', sans-serif;
   }
+
+  /* Типографика: предотвращение висячих предлогов */
+  p, span, li, div {
+    text-wrap: pretty;
+    word-spacing: 0.05em;
+  }
+  
+  /* Улучшенная типографика для заголовков */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
 }
 
 @layer components {
