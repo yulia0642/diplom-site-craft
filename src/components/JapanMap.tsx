@@ -1,8 +1,18 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
-import 'leaflet-defaulticon-compatibility';
 import { useLanguage } from '@/contexts/LanguageContext';
+
+// Fix default marker icon
+const icon = L.icon({
+  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 
 const JapanMap = () => {
   const { language } = useLanguage();
@@ -71,7 +81,7 @@ const JapanMap = () => {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {locations.map((location, index) => (
-          <Marker key={index} position={location.position}>
+          <Marker key={index} position={location.position} icon={icon}>
             <Popup>
               <div className="text-center">
                 <h3 className="font-semibold text-lg mb-1">{location.name}</h3>
