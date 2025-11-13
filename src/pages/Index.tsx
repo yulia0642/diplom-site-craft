@@ -5,10 +5,6 @@ import Culture from "@/components/Culture";
 import AppPromo from "@/components/AppPromo";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-// Lazy-load heavy map to avoid initial crash if library misbehaves
-import { lazy, Suspense } from "react";
-const JapanMapLazy = lazy(() => import("@/components/JapanMap"));
-import PopularDestinations from "@/components/PopularDestinations";
 import { Card, CardContent } from "@/components/ui/card";
 import { Book, Video, FileText, Users, Globe, Heart, ArrowRight, Sparkles, Mountain, Coffee, BookOpen, Map, Calendar, Languages, Utensils, Train, Building2, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -63,25 +59,6 @@ const Index = () => {
       </div>
       <Header />
       <Hero />
-      <PopularDestinations />
-      
-      {/* Interactive Map Section */}
-      <section className="py-16 ambient-section">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Интерактивная карта Японии
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Изучите ключевые направления и начните планировать своё путешествие
-            </p>
-          </div>
-          <Suspense fallback={<div className="w-full h-[600px] rounded-lg border border-border" />}> 
-            <JapanMapLazy />
-          </Suspense>
-        </div>
-      </section>
-      
       <Features />
       
       {/* Platform Benefits Section */}
