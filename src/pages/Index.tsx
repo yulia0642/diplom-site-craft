@@ -61,111 +61,6 @@ const Index = () => {
       <Hero />
       <Features />
       
-      {/* Platform Benefits Section */}
-      <section className="py-20 relative overflow-hidden bg-transparent ambient-section">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 animate-fade-up">
-            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
-              Ваш проводник в мир Японии
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Момидзи — это медийная платформа для всех, кто увлечён Японией, её культурой и языком. 
-              Мы создаём контент, который помогает глубже понять и прочувствовать японскую культуру.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              const colors = [
-                { bg: "bg-blue-500/10", text: "text-blue-500", border: "border-blue-500/20" },
-                { bg: "bg-purple-500/10", text: "text-purple-500", border: "border-purple-500/20" },
-                { bg: "bg-orange-500/10", text: "text-orange-500", border: "border-orange-500/20" },
-                { bg: "bg-pink-500/10", text: "text-pink-500", border: "border-pink-500/20" },
-                { bg: "bg-blue-500/10", text: "text-blue-500", border: "border-blue-500/20" },
-                { bg: "bg-purple-500/10", text: "text-purple-500", border: "border-purple-500/20" }
-              ];
-              const color = colors[index % colors.length];
-              return (
-                <Card 
-                  key={index} 
-                  className={`japanese-border hover-lift animate-fade-up border-2 ${color.border} hover:border-opacity-50 transition-all`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <CardContent className="p-6">
-                    <div className={`w-12 h-12 rounded-lg ${color.bg} flex items-center justify-center mb-4`}>
-                      <Icon className={`w-6 h-6 ${color.text}`} />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-foreground">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Links Section */}
-      <section className="py-16 bg-transparent relative overflow-hidden ambient-section">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Исследуйте контент</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Погрузитесь в мир Японии через наши статьи, видео и книги
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <Link to="/articles" className="group h-full">
-              <Card className="hover-lift transition-all border-2 hover:border-primary h-full">
-                <CardContent className="p-6 text-center flex flex-col h-full">
-                  <FileText className="w-12 h-12 mx-auto mb-4 text-primary" />
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Статьи</h3>
-                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                    Глубокие материалы о культуре и традициях
-                  </p>
-                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2 justify-center">
-                    Читать статьи <ArrowRight className="w-4 h-4" />
-                  </span>
-                </CardContent>
-              </Card>
-            </Link>
-            <Link to="/videos" className="group h-full">
-              <Card className="hover-lift transition-all border-2 hover:border-primary h-full">
-                <CardContent className="p-6 text-center flex flex-col h-full">
-                  <Video className="w-12 h-12 mx-auto mb-4 text-primary" />
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Видео</h3>
-                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                    Авторские влоги из Японии
-                  </p>
-                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2 justify-center">
-                    Смотреть видео <ArrowRight className="w-4 h-4" />
-                  </span>
-                </CardContent>
-              </Card>
-            </Link>
-            <Link to="/books" className="group h-full">
-              <Card className="hover-lift transition-all border-2 hover:border-primary h-full">
-                <CardContent className="p-6 text-center flex flex-col h-full">
-                  <Book className="w-12 h-12 mx-auto mb-4 text-primary" />
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Книги</h3>
-                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
-                    Избранные издания о Японии
-                  </p>
-                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2 justify-center">
-                    Смотреть книги <ArrowRight className="w-4 h-4" />
-                  </span>
-                </CardContent>
-              </Card>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Japanese Culture Insights */}
       <section className="py-20 bg-transparent relative overflow-hidden ambient-section">
         <div className="container mx-auto px-4 relative z-10">
@@ -551,6 +446,110 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Platform Benefits Section */}
+      <section className="py-20 relative overflow-hidden bg-transparent ambient-section">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16 animate-fade-up">
+            <h2 className="text-3xl md:text-5xl font-extrabold mb-6 text-foreground">
+              Ваш проводник в мир Японии
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Момидзи — это медийная платформа для всех, кто увлечён Японией, её культурой и языком. 
+              Мы создаём контент, который помогает глубже понять и прочувствовать японскую культуру.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              const colors = [
+                'from-primary/10 to-accent/10',
+                'from-accent/10 to-primary/10',
+                'from-primary/10 to-primary/5',
+                'from-accent/10 to-accent/5',
+                'from-primary/5 to-accent/10',
+                'from-accent/5 to-primary/10',
+              ];
+              return (
+                <Card
+                  key={index}
+                  className={`hover-lift group animate-fade-up backdrop-blur-sm bg-gradient-to-br ${colors[index % colors.length]} border-2 hover:border-primary transition-all duration-300`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardContent className="p-8 text-center">
+                    <div className="mb-6 transform group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="w-16 h-16 mx-auto text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {benefit.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links Section */}
+      <section className="py-16 bg-transparent relative overflow-hidden ambient-section">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Исследуйте контент</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Погрузитесь в мир Японии через наши статьи, видео и книги
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link to="/articles" className="group h-full">
+              <Card className="hover-lift transition-all border-2 hover:border-primary h-full">
+                <CardContent className="p-6 text-center flex flex-col h-full">
+                  <FileText className="w-12 h-12 mx-auto mb-4 text-primary" />
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Статьи</h3>
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                    Глубокие материалы о культуре и традициях
+                  </p>
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2 justify-center">
+                    Читать статьи <ArrowRight className="w-4 h-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/videos" className="group h-full">
+              <Card className="hover-lift transition-all border-2 hover:border-primary h-full">
+                <CardContent className="p-6 text-center flex flex-col h-full">
+                  <Video className="w-12 h-12 mx-auto mb-4 text-primary" />
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Видео</h3>
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                    Авторские влоги из Японии
+                  </p>
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2 justify-center">
+                    Смотреть видео <ArrowRight className="w-4 h-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link to="/books" className="group h-full">
+              <Card className="hover-lift transition-all border-2 hover:border-primary h-full">
+                <CardContent className="p-6 text-center flex flex-col h-full">
+                  <Book className="w-12 h-12 mx-auto mb-4 text-primary" />
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Книги</h3>
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
+                    Избранные издания о Японии
+                  </p>
+                  <span className="text-primary text-sm font-medium inline-flex items-center gap-2 justify-center">
+                    Смотреть книги <ArrowRight className="w-4 h-4" />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
