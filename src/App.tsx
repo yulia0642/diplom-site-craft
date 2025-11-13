@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
@@ -14,8 +14,19 @@ import Travel from "./pages/Travel";
 import About from "./pages/About";
 import CreateRoute from "./pages/CreateRoute";
 import NotFound from "./pages/NotFound";
+import { useEffect } from "react";
+import { applyPrepositionsWrap } from "@/lib/typography";
 
 const queryClient = new QueryClient();
+
+const TypographyManager = () => {
+  const location = useLocation();
+  useEffect(() => {
+    const root = document.getElementById("root");
+    if (root) applyPrepositionsWrap(root);
+  }, [location.pathname]);
+  return null;
+};
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -25,6 +36,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <TypographyManager />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/articles" element={<Articles />} />
