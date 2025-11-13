@@ -72,9 +72,21 @@ const JapanMap = () => {
     }
   ];
 
-  if (!isClient) {
-    return <div className="w-full h-[600px] rounded-lg border border-border" />;
-  }
+  const renderLayers = () => (
+    <>
+      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+      {locations.map((location, index) => (
+        <Marker key={index} position={location.position} icon={defaultIcon}>
+          <Popup>
+            <div className="text-center">
+              <h3 className="font-semibold text-lg mb-1">{location.name}</h3>
+              <p className="text-sm text-muted-foreground">{location.description}</p>
+            </div>
+          </Popup>
+        </Marker>
+      ))}
+    </>
+  );
 
   return (
     <div className="w-full h-[600px] rounded-lg overflow-hidden shadow-lg border border-border">
@@ -84,19 +96,21 @@ const JapanMap = () => {
         scrollWheelZoom={false}
         style={{ height: '100%', width: '100%' }}
       >
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {locations.map((location, index) => (
-          <Marker key={index} position={location.position} icon={defaultIcon}>
-            <Popup>
-              <div className="text-center">
-                <h3 className="font-semibold text-lg mb-1">{location.name}</h3>
-                <p className="text-sm text-muted-foreground">{location.description}</p>
-              </div>
-            </Popup>
-          </Marker>
-        ))}
+        {() => (
+          <>
+            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            {locations.map((location, index) => (
+              <Marker key={index} position={location.position} icon={defaultIcon}>
+                <Popup>
+                  <div className="text-center">
+                    <h3 className="font-semibold text-lg mb-1">{location.name}</h3>
+                    <p className="text-sm text-muted-foreground">{location.description}</p>
+                  </div>
+                </Popup>
+              </Marker>
+            ))}
+          </>
+        )}
       </MapContainer>
     </div>
   );

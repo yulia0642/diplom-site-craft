@@ -10,7 +10,7 @@ import { lazy, Suspense } from "react";
 const JapanMapLazy = lazy(() => import("@/components/JapanMap"));
 import PopularDestinations from "@/components/PopularDestinations";
 import { Card, CardContent } from "@/components/ui/card";
-import { Book, Video, FileText, Users, Globe, Heart, ArrowRight, Sparkles, Mountain, Coffee, BookOpen, Map, Calendar, Languages, Utensils, Train, Building2, Cherry } from "lucide-react";
+import { Book, Video, FileText, Users, Globe, Heart, ArrowRight, Sparkles, Mountain, Coffee, BookOpen, Map, Calendar, Languages, Utensils, Train, Building2, Leaf } from "lucide-react";
 import { Link } from "react-router-dom";
 import zenMeditationMonk from "@/assets/zen-meditation-monk.jpg";
 import matchaCeremony from "@/assets/matcha-ceremony.jpg";
@@ -353,7 +353,7 @@ const Index = () => {
                   accentColor: "bg-orange-500"
                 },
                 {
-                  icon: Cherry,
+                  icon: Leaf,
                   number: "4",
                   label: "сезона",
                   subtitle: "Климатические зоны",
