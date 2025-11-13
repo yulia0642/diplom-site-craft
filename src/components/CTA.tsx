@@ -12,12 +12,12 @@ const CTA = () => {
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            Готовы отправиться в{"\u00A0"}путешествие?
+            Готовы отправиться в путешествие?
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Получите персонализированный маршрут и{"\u00A0"}эксклюзивные советы<br className="hidden md:block" />
-            для вашей поездки в{"\u00A0"}Японию.
+            Получите персонализированный маршрут и эксклюзивные советы<br className="hidden md:block" />
+            для вашей поездки в Японию.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 max-w-xl mx-auto">
@@ -33,8 +33,8 @@ const CTA = () => {
           </div>
 
           <p className="text-sm text-muted-foreground">
-            Присоединяйтесь к{"\u00A0"}10,000+ путешественникам,<br className="hidden sm:block" />
-            которые уже открыли для себя Японию с{"\u00A0"}нами.
+            Присоединяйтесь к 10,000+ путешественникам,<br className="hidden sm:block" />
+            которые уже открыли для себя Японию с нами.
           </p>
         </div>
       </div>

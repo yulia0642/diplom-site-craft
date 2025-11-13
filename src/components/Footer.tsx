@@ -13,8 +13,8 @@ const Footer = () => {
               <h3 className="text-2xl font-bold text-primary">Момидзи</h3>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Медийная платформа и\u00A0гид по\u00A0Японии.<br />
-              Персональные маршруты, культурные истории и\u00A0аутентичный контент.
+              Медийная платформа и гид по Японии.<br />
+              Персональные маршруты, культурные истории и аутентичный контент.
             </p>
           </div>
 
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>© {currentYear} Момидзи — медийная платформа о\u00A0Японии. Все права защищены.</p>
+          <p>© {currentYear} Момидзи — медийная платформа о Японии. Все права защищены.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-primary transition-colors">Политика конфиденциальности</a>
             <a href="#" className="hover:text-primary transition-colors">Условия использования</a>

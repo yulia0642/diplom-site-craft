@@ -21,10 +21,10 @@ const Travel = () => {
               <span className="text-sm font-medium text-primary">Интерактивный путеводитель</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-foreground">
-              Путешествия по\u00A0Японии
+              Путешествия по Японии
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Откройте для себя готовые маршруты или создайте свой идеальный тур с\u00A0учётом ваших интересов и\u00A0бюджета
+              Откройте для себя готовые маршруты или создайте свой идеальный тур с учётом ваших интересов и бюджета
             </p>
           </div>
         </section>
@@ -39,7 +39,7 @@ const Travel = () => {
                 Интерактивная карта Японии
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Изучите ключевые направления и\u00A0начните планировать своё путешествие
+                Изучите ключевые направления и начните планировать своё путешествие
               </p>
             </div>
             <Suspense fallback={<div className="w-full h-[600px] rounded-lg border border-border" />}> 
@@ -63,7 +63,7 @@ const Travel = () => {
                       <FileText className="w-8 h-8 text-primary mb-3" />
                       <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Статьи</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        О\u00A0культуре и\u00A0традициях
+                        О культуре и традициях
                       </p>
                       <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
                         Читать <ArrowRight className="w-4 h-4" />
@@ -75,7 +75,7 @@ const Travel = () => {
                       <Video className="w-8 h-8 text-primary mb-3" />
                       <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Видео</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Влоги из\u00A0Японии
+                        Влоги из Японии
                       </p>
                       <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
                         Смотреть <ArrowRight className="w-4 h-4" />
@@ -87,7 +87,7 @@ const Travel = () => {
                       <Book className="w-8 h-8 text-primary mb-3" />
                       <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Книги</h3>
                       <p className="text-sm text-muted-foreground mb-3">
-                        Гиды и\u00A0путеводители
+                        Гиды и путеводители
                       </p>
                       <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
                         Посмотреть <ArrowRight className="w-4 h-4" />

@@ -29,7 +29,7 @@ const AppPromo = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Подкасты</h3>
                 <p className="text-muted-foreground">
-                  Слушайте истории о{"\u00A0"}Японии, языковые уроки и{"\u00A0"}интервью с{"\u00A0"}путешественниками в{"\u00A0"}любое время.
+                  Слушайте истории о Японии, языковые уроки и интервью с путешественниками в любое время.
                 </p>
               </CardContent>
             </Card>
@@ -41,7 +41,7 @@ const AppPromo = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Карты метро</h3>
                 <p className="text-muted-foreground">
-                  Интерактивные карты метро всех крупных городов Японии с{"\u00A0"}офлайн-доступом и{"\u00A0"}маршрутизацией.
+                  Интерактивные карты метро всех крупных городов Японии с офлайн-доступом и маршрутизацией.
                 </p>
               </CardContent>
             </Card>
@@ -53,7 +53,7 @@ const AppPromo = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">Офлайн-режим</h3>
                 <p className="text-muted-foreground">
-                  Сохраняйте маршруты, статьи и{"\u00A0"}гиды для доступа без интернета прямо в{"\u00A0"}поездке.
+                  Сохраняйте маршруты, статьи и гиды для доступа без интернета прямо в поездке.
                 </p>
               </CardContent>
             </Card>
@@ -61,7 +61,7 @@ const AppPromo = () => {
 
           <div className="text-center">
             <Button size="lg" className="px-8">
-              Узнать о{"\u00A0"}запуске первым
+              Узнать о запуске первым
             </Button>
           </div>
         </div>
