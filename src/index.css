@@ -275,3 +275,14 @@ All colors MUST be HSL.
       radial-gradient(820px 520px at 88% 24%, hsl(var(--accent) / 0.18), transparent);
   }
 }
+
+/* Article content spacing and readability */
+@layer components {
+  .article-content p {
+    @apply mb-6 leading-relaxed text-muted-foreground;
+  }
+  .article-content p:last-child {
+    @apply mb-0;
+  }
+}
+
