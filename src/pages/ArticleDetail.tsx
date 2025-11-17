@@ -226,8 +226,8 @@ const ArticleDetail = () => {
                        prose-headings:font-bold prose-headings:text-foreground
                        prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6
                        prose-p:text-foreground prose-p:leading-relaxed prose-p:mb-6 prose-p:text-xl
-                       prose-em:text-primary prose-em:not-italic prose-em:font-medium
-                       prose-strong:text-foreground"
+                       prose-em:text-foreground prose-em:not-italic prose-em:font-medium
+                       prose-strong:text-foreground prose-li:text-foreground prose-ul:text-foreground"
             dangerouslySetInnerHTML={{ __html: article.content }}
           />
         </article>
