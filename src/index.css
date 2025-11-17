@@ -284,5 +284,8 @@ All colors MUST be HSL.
   .article-content p:last-child {
     @apply mb-0;
   }
+  .article-content p::first-letter {
+    text-transform: uppercase;
+  }
 }
 
