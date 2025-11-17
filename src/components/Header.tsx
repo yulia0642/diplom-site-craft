@@ -45,7 +45,7 @@ const Header = () => {
                   : "text-muted-foreground"
               }`}
             >
-              {item.name}
+              {item.path === "/about" && language === 'ru' ? "О платформе" : item.name}
             </Link>
           ))}
           <Button
