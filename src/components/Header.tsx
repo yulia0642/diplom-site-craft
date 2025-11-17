@@ -83,7 +83,7 @@ const Header = () => {
                   isActive(item.path) ? "text-primary" : "text-muted-foreground"
                 }`}
               >
-                {item.name}
+                {item.path === "/about" && language === 'ru' ? "О платформе" : item.name}
               </Link>
             ))}
             <Button
