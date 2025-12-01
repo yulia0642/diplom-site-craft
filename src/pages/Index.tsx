@@ -286,11 +286,11 @@ const Index = () => {
               <CardContent className="p-8">
                 <div className="grid md:grid-cols-3 gap-8 text-center">
                   <div>
-                    <div className="text-3xl font-bold text-foreground mb-2">377,975 км²</div>
+                    <div className="text-3xl font-bold text-foreground mb-2">377975 км²</div>
                     <div className="text-sm text-muted-foreground">Общая площадь</div>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-foreground mb-2">29,751 км</div>
+                    <div className="text-3xl font-bold text-foreground mb-2">29751 км</div>
                     <div className="text-sm text-muted-foreground">Длина береговой линии</div>
                   </div>
                   <div>
