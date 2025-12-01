@@ -1,74 +1,52 @@
-import React, { useEffect, useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import 'leaflet/dist/leaflet.css';
-import 'leaflet-defaulticon-compatibility';
-import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css';
-import L from 'leaflet';
 
 const JapanMap = () => {
-  const { t } = useLanguage();
-  const [isClient, setIsClient] = useState(false);
+  const { language } = useLanguage();
+  const title = language === 'en' ? 'Interactive Map of Japan' : 'Интерактивная карта Японии';
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  // Custom icon for markers
-  const defaultIcon = L.icon({
-    iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-    iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
-    shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-  });
-
-  // Major cities in Japan with coordinates
+  // Cities data for display
   const cities = [
-    { name: 'map.tokyo', description: 'map.capital', position: [35.6762, 139.6503] as [number, number] },
-    { name: 'map.kyoto', description: 'map.culturalCapital', position: [35.0116, 135.7681] as [number, number] },
-    { name: 'map.osaka', description: 'map.foodCapital', position: [34.6937, 135.5023] as [number, number] },
-    { name: 'map.hiroshima', description: 'map.peaceMemorial', position: [34.3853, 132.4553] as [number, number] },
-    { name: 'map.sapporo', description: 'map.northernCity', position: [43.0642, 141.3469] as [number, number] },
-    { name: 'map.fukuoka', description: 'map.southernHub', position: [33.5904, 130.4017] as [number, number] },
-    { name: 'map.nara', description: 'map.ancientCapital', position: [34.6851, 135.8048] as [number, number] },
-    { name: 'map.nagoya', description: 'map.industrialCenter', position: [35.1815, 136.9066] as [number, number] },
-    { name: 'map.yokohama', description: 'map.portCity', position: [35.4437, 139.6380] as [number, number] },
+    { nameEn: 'Tokyo', nameRu: 'Токио', descEn: 'Capital of Japan', descRu: 'Столица Японии' },
+    { nameEn: 'Kyoto', nameRu: 'Киото', descEn: 'Cultural Capital', descRu: 'Культурная столица' },
+    { nameEn: 'Osaka', nameRu: 'Осака', descEn: 'Food Capital', descRu: 'Гастрономическая столица' },
+    { nameEn: 'Hiroshima', nameRu: 'Хиросима', descEn: 'Peace Memorial', descRu: 'Мемориал мира' },
+    { nameEn: 'Sapporo', nameRu: 'Саппоро', descEn: 'Northern City', descRu: 'Северный город' },
+    { nameEn: 'Fukuoka', nameRu: 'Фукуока', descEn: 'Southern Kyushu Hub', descRu: 'Южный центр Кюсю' },
+    { nameEn: 'Nara', nameRu: 'Нара', descEn: 'Ancient Capital', descRu: 'Древняя столица' },
+    { nameEn: 'Nagoya', nameRu: 'Нагоя', descEn: 'Industrial Center', descRu: 'Индустриальный центр' },
+    { nameEn: 'Yokohama', nameRu: 'Йокогама', descEn: 'Port City', descRu: 'Портовый город' },
   ];
 
-  if (!isClient) {
-    return (
-      <div className="w-full h-[600px] rounded-lg overflow-hidden shadow-lg border border-border flex items-center justify-center">
-        <p className="text-muted-foreground">Загрузка карты...</p>
-      </div>
-    );
-  }
+  const bbox = '122.938,24.396,153.986,45.551';
+  const marker = '36.2048%2C138.2529';
+  const src = `https://www.openstreetmap.org/export/embed.html?bbox=${bbox}&layer=mapnik&marker=${marker}`;
 
   return (
-    <div className="w-full h-[600px] rounded-lg overflow-hidden shadow-lg border border-border">
-      <MapContainer
-        center={[36.2048, 138.2529]}
-        zoom={6}
-        className="w-full h-full"
-        scrollWheelZoom={false}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    <div className="space-y-6">
+      <div className="w-full h-[600px] rounded-lg overflow-hidden shadow-lg border border-border">
+        <iframe
+          title={title}
+          src={src}
+          style={{ border: 0 }}
+          className="w-full h-full"
+          loading="lazy"
         />
+      </div>
+      
+      {/* Cities list */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {cities.map((city, index) => (
-          <Marker key={index} position={city.position} icon={defaultIcon}>
-            <Popup>
-              <div className="text-center">
-                <h3 className="font-bold text-base mb-1">{t(city.name)}</h3>
-                <p className="text-sm text-muted-foreground">{t(city.description)}</p>
-              </div>
-            </Popup>
-          </Marker>
+          <div key={index} className="p-4 bg-card rounded-lg border border-border hover:border-primary transition-colors">
+            <h3 className="font-bold text-lg mb-1">
+              {language === 'en' ? city.nameEn : city.nameRu}
+            </h3>
+            <p className="text-sm text-muted-foreground">
+              {language === 'en' ? city.descEn : city.descRu}
+            </p>
+          </div>
         ))}
-      </MapContainer>
+      </div>
     </div>
   );
 };
