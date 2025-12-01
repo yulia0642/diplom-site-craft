@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { useLanguage } from '@/contexts/LanguageContext';
 import 'leaflet/dist/leaflet.css';
@@ -8,6 +8,11 @@ import L from 'leaflet';
 
 const JapanMap = () => {
   const { t } = useLanguage();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Custom icon for markers
   const defaultIcon = L.icon({
@@ -32,6 +37,14 @@ const JapanMap = () => {
     { name: 'map.nagoya', description: 'map.industrialCenter', position: [35.1815, 136.9066] as [number, number] },
     { name: 'map.yokohama', description: 'map.portCity', position: [35.4437, 139.6380] as [number, number] },
   ];
+
+  if (!isClient) {
+    return (
+      <div className="w-full h-[600px] rounded-lg overflow-hidden shadow-lg border border-border flex items-center justify-center">
+        <p className="text-muted-foreground">Загрузка карты...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full h-[600px] rounded-lg overflow-hidden shadow-lg border border-border">
