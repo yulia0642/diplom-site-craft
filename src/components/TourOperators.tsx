@@ -12,7 +12,7 @@ const TourOperators = () => {
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Выберите удобный вариант: готовый тур от партнёров<br className="hidden md:block" />
-            или полностью самостоятельное путешествие.
+            или полностью самостоятельное путешествие
           </p>
         </div>
 
