@@ -17,7 +17,7 @@ const AppPromo = () => {
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Всё содержимое платформы всегда под рукой,<br className="hidden md:block" />
-              плюс эксклюзивные функции для путешественников.
+              плюс эксклюзивные функции для путешественников
             </p>
           </div>
 

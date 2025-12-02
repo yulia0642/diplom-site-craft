@@ -29,7 +29,7 @@ const Features = () => {
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Современная платформа, сочетающая технологии<br className="hidden md:block" />
-            и живой опыт путешественников.
+            и живой опыт путешественников
           </p>
         </div>
 

@@ -17,7 +17,7 @@ const CTA = () => {
           
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Получите персонализированный маршрут и эксклюзивные советы<br className="hidden md:block" />
-            для вашей поездки в Японию.
+            для вашей поездки в Японию
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8 max-w-xl mx-auto">
