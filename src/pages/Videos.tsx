@@ -87,8 +87,8 @@ const Videos = () => {
               Видеоблоги о Японии
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-              Смотрите авторские видеоблоги от русскоязычных путешественников и экспатов,<br className="hidden md:block" />
-              живущих в Японии. Реальные истории, практические советы и уникальные ракурсы.
+              Смотрите авторские видеоблоги от русскоязычных путешественников<br className="hidden md:block" />
+              и экспатов, живущих в Японии — реальные истории, советы и уникальные ракурсы
             </p>
             <div className="flex justify-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
