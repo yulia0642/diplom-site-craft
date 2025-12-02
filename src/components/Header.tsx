@@ -3,6 +3,7 @@ import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
+import SearchDialog from "@/components/SearchDialog";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +49,7 @@ const Header = () => {
               {item.path === "/about" && language === 'ru' ? "О платформе" : item.name}
             </Link>
           ))}
+          <SearchDialog />
           <Button
             variant="ghost"
             size="sm"
@@ -74,6 +76,7 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-sm">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+            <SearchDialog />
             {navItems.map((item) => (
               <Link
                 key={item.path}
