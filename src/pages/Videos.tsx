@@ -188,7 +188,7 @@ const Videos = () => {
               <h2 className="text-2xl font-bold mb-4">Станьте частью сообщества</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 Подписывайтесь на канал Момидзи, чтобы не пропустить новые видео,<br className="hidden md:block" />
-                эксклюзивный контент и прямые трансляции из Японии.
+                эксклюзивный контент и прямые трансляции из Японии
               </p>
               <Button size="lg" className="gap-2">
                 <Play size={20} />
