@@ -34,7 +34,7 @@ const About = () => {
             <div className="prose prose-lg mx-auto">
               <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-center text-foreground">Наша история</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Название "Момидзи" (紅葉) означает "красные осенние листья клёна" на японском языке. 
+                Название «Момидзи» (紅葉) означает «красные осенние листья клёна» на японском языке. 
                 Это слово символизирует красоту переходных моментов, внимание к деталям и гармонию 
                 с природой — ценности, которые лежат в основе японской культуры.
               </p>
