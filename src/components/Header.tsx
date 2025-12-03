@@ -46,7 +46,7 @@ const Header = () => {
                   : "text-muted-foreground"
               }`}
             >
-              {item.path === "/about" && language === 'ru' ? "О платформе" : item.name}
+              {item.name}
             </Link>
           ))}
           <SearchDialog />
@@ -86,7 +86,7 @@ const Header = () => {
                   isActive(item.path) ? "text-primary" : "text-muted-foreground"
                 }`}
               >
-                {item.path === "/about" && language === 'ru' ? "О платформе" : item.name}
+                {item.name}
               </Link>
             ))}
             <Button
