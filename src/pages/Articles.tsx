@@ -6,12 +6,12 @@ import teaCeremonyImg from "@/assets/tea-ceremony.jpg";
 import tokyoFoodImg from "@/assets/tokyo-food.jpg";
 import onsenImg from "@/assets/onsen-autumn.jpg";
 import zenGardenImg from "@/assets/zen-garden.jpg";
-import cultureToriiImg from "@/assets/culture-torii.jpg";
-import mountFujiImg from "@/assets/guide-mount-fuji.jpg";
-import kyotoStreetImg from "@/assets/kyoto-street.jpg";
-import spiritualTempleImg from "@/assets/spiritual-temple.jpg";
-import tokyoCityscapeImg from "@/assets/tokyo-cityscape.jpg";
-import zenMeditationImg from "@/assets/zen-meditation-monk.jpg";
+import toriiGatesImg from "@/assets/article-torii-gates.jpg";
+import fujiClimbImg from "@/assets/article-fuji-climb.jpg";
+import kyotoGeishaImg from "@/assets/article-kyoto-geisha.jpg";
+import buddhistPagodaImg from "@/assets/article-buddhist-pagoda.jpg";
+import tokyoFutureImg from "@/assets/article-tokyo-future.jpg";
+import zazenMeditationImg from "@/assets/article-zazen-meditation.jpg";
 
 const articles = [
   {
@@ -50,7 +50,7 @@ const articles = [
     id: 5,
     title: "Синтоизм и тории: врата между мирами",
     excerpt: "История и символизм красных ворот тории — как они связывают мир людей с царством ками и почему их можно найти по всей Японии.",
-    image: cultureToriiImg,
+    image: toriiGatesImg,
     date: "1 марта 2025",
     readTime: "9 мин",
   },
@@ -58,7 +58,7 @@ const articles = [
     id: 6,
     title: "Покорение Фудзи: путеводитель для восходителей",
     excerpt: "Практические советы по восхождению на священную гору — маршруты, сезоны, снаряжение и традиции ночного подъёма к рассвету.",
-    image: mountFujiImg,
+    image: fujiClimbImg,
     date: "25 февраля 2025",
     readTime: "15 мин",
   },
@@ -66,7 +66,7 @@ const articles = [
     id: 7,
     title: "Киото: город тысячи храмов",
     excerpt: "Прогулка по древней столице — от золотого павильона Кинкаку-дзи до тихих улочек Гиона, где время словно остановилось.",
-    image: kyotoStreetImg,
+    image: kyotoGeishaImg,
     date: "20 февраля 2025",
     readTime: "11 мин",
   },
@@ -74,7 +74,7 @@ const articles = [
     id: 8,
     title: "Буддийские храмы Японии",
     excerpt: "Архитектура, ритуалы и философия японского буддизма — от величественных комплексов Нары до горных монастырей Коя-сан.",
-    image: spiritualTempleImg,
+    image: buddhistPagodaImg,
     date: "15 февраля 2025",
     readTime: "13 мин",
   },
@@ -82,7 +82,7 @@ const articles = [
     id: 9,
     title: "Токио будущего: технологии и традиции",
     excerpt: "Как крупнейший мегаполис мира сочетает ультрасовременные технологии с вековыми обычаями и создаёт уникальную городскую культуру.",
-    image: tokyoCityscapeImg,
+    image: tokyoFutureImg,
     date: "10 февраля 2025",
     readTime: "10 мин",
   },
@@ -90,7 +90,7 @@ const articles = [
     id: 10,
     title: "Дзадзэн: искусство сидячей медитации",
     excerpt: "Введение в практику дзэн-медитации — как монахи достигают просветления через неподвижность и осознанное дыхание.",
-    image: zenMeditationImg,
+    image: zazenMeditationImg,
     date: "5 февраля 2025",
     readTime: "8 мин",
   },
