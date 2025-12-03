@@ -17,7 +17,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.books': 'Книги',
     'nav.videos': 'Видеоблоги',
     'nav.travel': 'Путешествия',
-    'nav.about': 'О платформе',
+    'nav.about': 'Платформа',
     'map.title': 'Интерактивная карта Японии',
     'map.tokyo': 'Токио',
     'map.kyoto': 'Киото',
