@@ -26,7 +26,7 @@ const TourOperators = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Сотрудничаем с проверенными туроператорами, специализирующимися на путешествиях в Японию.
+                Сотрудничаем с проверенными туроператорами, специализирующимися на путешествиях в Японию
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -61,7 +61,7 @@ const TourOperators = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Создайте уникальное путешествие с помощью наших инструментов и гидов.
+                Создайте уникальное путешествие с помощью наших инструментов и гидов
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
