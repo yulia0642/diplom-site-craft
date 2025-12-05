@@ -17,7 +17,7 @@ const PopularDestinations = () => {
       image: tokyoSkyline,
       description: language === 'en'
         ? 'Experience the perfect blend of ultra-modern and traditional Japanese culture'
-        : 'Почувствуйте идеальное сочетание ультрасовременной и традиционной японской культуры',
+        : 'Почувствуйте идеальное сочетание современной и традиционной японской культуры',
       highlights: language === 'en'
         ? ['Shibuya Crossing', 'Tokyo Tower', 'Senso-ji Temple']
         : ['Перекресток Сибуя', 'Токийская башня', 'Храм Сэнсо-дзи']
