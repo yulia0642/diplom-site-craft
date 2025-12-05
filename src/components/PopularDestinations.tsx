@@ -43,7 +43,7 @@ const PopularDestinations = () => {
         : ['Цветение сакуры', 'Пять озер', 'Пешеходные тропы']
     },
     {
-      name: language === 'en' ? 'Traditional Ryokan' : 'Традиционный рёкан',
+      name: language === 'en' ? 'Traditional Ryokan' : 'Традиционный рекан',
       image: ryokan,
       description: language === 'en'
         ? 'Stay in a traditional Japanese inn with tatami rooms and zen gardens'
