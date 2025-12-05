@@ -53,7 +53,7 @@ const PopularDestinations = () => {
         : ['Комнаты татами', 'Кухня кайсэки', 'Горячие источники']
     },
     {
-      name: language === 'en' ? 'Osaka Food Scene' : 'Еда в Осаке',
+      name: language === 'en' ? 'Osaka' : 'Осака',
       image: osakaFood,
       description: language === 'en'
         ? 'Discover street food paradise with takoyaki, okonomiyaki, and more'
