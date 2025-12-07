@@ -226,7 +226,7 @@ const About = () => {
                       </div>
                     </div>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      «{testimonial.text}»
+                      {testimonial.text}
                     </p>
                   </div>
                 );
