@@ -63,7 +63,8 @@ export function applyPrepositionsWrap(root: HTMLElement) {
       SHORT_WORDS.forEach(word => {
         // Ищем короткое слово как отдельное слово (с границами слова) + пробел
         const regex = new RegExp(`(^|\\s)(${word})\\s+`, 'giu');
-        value = value.replace(regex, `$1${word}${nbsp}`);
+        // Важно: сохраняем исходный регистр (например, «Мы», «Я»), подставляя найденное значение ($2)
+        value = value.replace(regex, `$1$2${nbsp}`);
       });
       
       if (value !== node.nodeValue) {
