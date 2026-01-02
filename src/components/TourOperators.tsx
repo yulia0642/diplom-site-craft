@@ -11,7 +11,7 @@ const TourOperators = () => {
             Планируйте поездку вашим способом
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Выберите удобный вариант: готовый тур от партнёров<br className="hidden md:block" />
+            Выберите удобный вариант: готовый тур от партнеров<br className="hidden md:block" />
             или полностью самостоятельное путешествие
           </p>
         </div>
@@ -22,7 +22,7 @@ const TourOperators = () => {
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
                 <Building2 className="w-6 h-6 text-primary" />
               </div>
-              <CardTitle className="text-2xl">Готовые туры от партнёров</CardTitle>
+              <CardTitle className="text-2xl">Готовые туры от партнеров</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
@@ -66,7 +66,7 @@ const TourOperators = () => {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                  <span>Конструктор маршрутов с учётом ваших интересов</span>
+                  <span>Конструктор маршрутов с учетом ваших интересов</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
@@ -92,12 +92,12 @@ const TourOperators = () => {
           <Card className="max-w-4xl mx-auto border-border/50 bg-transparent">
             <CardContent className="py-8">
               <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-semibold mb-3">Наши партнёры</h3>
+              <h3 className="text-2xl font-semibold mb-3">Наши партнеры</h3>
               <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Мы сотрудничаем только с проверенными туроператорами,<br className="hidden md:block" />
                 которые обеспечивают высокое качество сервиса<br className="hidden md:block" />
                 и глубокое понимание японской культуры.<br />
-                Каждый партнёр проходит тщательный отбор.
+                Каждый партнер проходит тщательный отбор.
               </p>
             </CardContent>
           </Card>

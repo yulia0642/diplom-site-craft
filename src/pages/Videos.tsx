@@ -206,7 +206,7 @@ const Videos = () => {
                   <FileText className="w-8 h-8 text-primary mb-3" />
                   <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Статьи</h3>
                   <p className="text-sm text-muted-foreground mb-3">
-                    Углублённые материалы о Японии
+                    Углубленные материалы о Японии
                   </p>
                   <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
                     Читать <ArrowRight className="w-4 h-4" />
