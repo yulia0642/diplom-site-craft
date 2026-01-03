@@ -156,7 +156,7 @@ const Books = () => {
               <h2 className="text-2xl font-bold mb-4">Поддержите авторов</h2>
               <p className="text-muted-foreground">
                 Покупая эти книги, вы поддерживаете независимых авторов и помогаете создавать 
-                качественный контент о Японии на русском языке. Часть средств идёт на развитие 
+                качественный контент о Японии на русском языке. Часть средств идет на развитие 
                 платформы Момидзи.
               </p>
             </div>
@@ -184,7 +184,7 @@ const Books = () => {
                     <Compass className="w-8 h-8 text-primary mb-3" />
                     <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">Готовые маршруты</h3>
                     <p className="text-sm text-muted-foreground mb-3">
-                      Спланируйте своё путешествие
+                      Спланируйте свое путешествие
                     </p>
                     <span className="text-primary text-sm font-medium inline-flex items-center gap-2">
                       Выбрать маршрут <ArrowRight className="w-4 h-4" />
