@@ -24,7 +24,7 @@ const Travel = () => {
               Путешествия по Японии
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Откройте для себя готовые маршруты или создайте свой идеальный тур с учётом ваших интересов и бюджета
+              Откройте для себя готовые маршруты или создайте свой идеальный тур с учетом ваших интересов и бюджета
             </p>
           </div>
         </section>
@@ -39,7 +39,7 @@ const Travel = () => {
                 Интерактивная карта Японии
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Изучите ключевые направления и начните планировать своё путешествие
+                Изучите ключевые направления и начните планировать свое путешествие
               </p>
             </div>
             <Suspense fallback={<div className="w-full h-[600px] rounded-lg border border-border" />}> 
