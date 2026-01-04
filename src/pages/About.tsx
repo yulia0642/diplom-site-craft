@@ -240,7 +240,7 @@ const About = () => {
               <h2 className="text-2xl md:text-3xl font-extrabold mb-4 text-foreground">Присоединяйтесь к нам</h2>
               <p className="text-muted-foreground mb-6">
                 Момидзи постоянно растет. Если вы эксперт по Японии, создаете контент 
-                или хотите сотрудничать с нами, мы будем рады услышать от вас
+                или хотите сотрудничать с нами, напишите нам — мы открыты для новых идей и проектов.
               </p>
               <a
                 href="mailto:contact@momidji.com"
