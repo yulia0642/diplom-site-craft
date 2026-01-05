@@ -43,9 +43,9 @@ const Culture = () => {
               <div className="flex items-start gap-4">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
                 <div>
-                  <p className="font-semibold mb-1">Человеческий опыт</p>
+                  <p className="font-semibold mb-1">Экспертный контент</p>
                   <p className="text-muted-foreground">
-                    Все описания и рекомендации составлены людьми, а не ИИ
+                    Материалы создаются редакторами и экспертами, которые знают Японию не понаслышке
                   </p>
                 </div>
               </div>
