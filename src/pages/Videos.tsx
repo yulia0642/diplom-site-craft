@@ -92,11 +92,6 @@ const Videos = () => {
             </p>
             <div className="flex justify-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <Play size={16} />
-                <span>150+ видео</span>
-              </div>
-              <div>•</div>
-              <div className="flex items-center gap-2">
                 <Calendar size={16} />
                 <span>Новые каждую неделю</span>
               </div>
