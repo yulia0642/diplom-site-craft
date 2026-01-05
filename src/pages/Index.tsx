@@ -146,6 +146,7 @@ const Index = () => {
                 <h3 className="text-xl font-bold mb-3">Сезоны и природа</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   В Японии особое отношение к смене времен года. Цветение сакуры весной, 
+                  летние фестивали мацури с фейерверками и танцами Бон-одори, 
                   осенние клены момидзи, зимние снежные пейзажи — каждый сезон воспевается в искусстве.
                 </p>
                 <div className="text-3xl font-sans text-primary mb-2">
