@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X, Globe, Sun, Moon } from "lucide-react";
 import { useState } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import SearchDialog from "@/components/SearchDialog";
 
@@ -9,6 +10,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { language, setLanguage, t } = useLanguage();
+  const { theme, setTheme } = useTheme();
 
   const navItems = [
     { name: t('nav.home'), path: "/" },
@@ -21,6 +23,10 @@ const Header = () => {
 
   const toggleLanguage = () => {
     setLanguage(language === 'ru' ? 'en' : 'ru');
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   const isActive = (path: string) => location.pathname === path;
@@ -50,6 +56,14 @@ const Header = () => {
             </Link>
           ))}
           <SearchDialog />
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </Button>
           <Button
             variant="ghost"
             size="sm"
@@ -89,16 +103,26 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="gap-2 justify-start"
-              aria-label="Toggle language"
-            >
-              <Globe size={18} />
-              <span className="font-medium">{language === 'ru' ? 'English' : 'Русский'}</span>
-            </Button>
+            <div className="flex gap-2">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleTheme}
+                aria-label="Toggle theme"
+              >
+                {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleLanguage}
+                className="gap-2"
+                aria-label="Toggle language"
+              >
+                <Globe size={18} />
+                <span className="font-medium">{language === 'ru' ? 'English' : 'Русский'}</span>
+              </Button>
+            </div>
           </div>
         </div>
       )}
